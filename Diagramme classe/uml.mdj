@@ -15207,7 +15207,8 @@
 								"$ref": "AAAAAAFndDYRiVxIu5Y="
 							},
 							"name": "Id",
-							"visibility": "protected"
+							"visibility": "protected",
+							"type": ""
 						}
 					]
 				},
@@ -15254,7 +15255,8 @@
 								"$ref": "AAAAAAFndDY3E1xyT/U="
 							},
 							"name": "Id",
-							"visibility": "protected"
+							"visibility": "protected",
+							"type": ""
 						}
 					]
 				},
@@ -16701,7 +16703,8 @@
 								"$ref": "AAAAAAFndNT386g2GbQ="
 							},
 							"name": "TpsLavage",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16710,7 +16713,8 @@
 								"$ref": "AAAAAAFndNT386g2GbQ="
 							},
 							"name": "Contenance",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -16825,7 +16829,8 @@
 								"$ref": "AAAAAAFndNaL8K3BpFA="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -17006,7 +17011,8 @@
 								"$ref": "AAAAAAFneJTx+MTqk10="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17015,7 +17021,8 @@
 								"$ref": "AAAAAAFneJTx+MTqk10="
 							},
 							"name": "Nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17024,7 +17031,8 @@
 								"$ref": "AAAAAAFneJTx+MTqk10="
 							},
 							"name": "StockMax",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17033,7 +17041,8 @@
 								"$ref": "AAAAAAFneJTx+MTqk10="
 							},
 							"name": "NbSale",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -17052,7 +17061,8 @@
 								"$ref": "AAAAAAFneJnRc80jlhE="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17061,7 +17071,8 @@
 								"$ref": "AAAAAAFneJnRc80jlhE="
 							},
 							"name": "Nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -17170,7 +17181,8 @@
 								"$ref": "AAAAAAFneLCbLwR55zs="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17179,7 +17191,8 @@
 								"$ref": "AAAAAAFneLCbLwR55zs="
 							},
 							"name": "Nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17188,7 +17201,8 @@
 								"$ref": "AAAAAAFneLCbLwR55zs="
 							},
 							"name": "Qte",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17197,7 +17211,8 @@
 								"$ref": "AAAAAAFneLCbLwR55zs="
 							},
 							"name": "NbSale",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17206,7 +17221,8 @@
 								"$ref": "AAAAAAFneLCbLwR55zs="
 							},
 							"name": "TpsLavage",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -17244,7 +17260,8 @@
 								"$ref": "AAAAAAFneLckxi3WxWo="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17253,7 +17270,8 @@
 								"$ref": "AAAAAAFneLckxi3WxWo="
 							},
 							"name": "Nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -17304,7 +17322,8 @@
 								"$ref": "AAAAAAFneLe8qTD8zhU="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17313,7 +17332,8 @@
 								"$ref": "AAAAAAFneLe8qTD8zhU="
 							},
 							"name": "Nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -17364,7 +17384,8 @@
 								"$ref": "AAAAAAFneLkLdzY5AeQ="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17373,7 +17394,8 @@
 								"$ref": "AAAAAAFneLkLdzY5AeQ="
 							},
 							"name": "Nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -17424,7 +17446,8 @@
 								"$ref": "AAAAAAFneMjsc2fNgBE="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17433,7 +17456,8 @@
 								"$ref": "AAAAAAFneMjsc2fNgBE="
 							},
 							"name": "Nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
@@ -17484,7 +17508,8 @@
 								"$ref": "AAAAAAFneNiRm3CHLk8="
 							},
 							"name": "Id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -17493,7 +17518,8 @@
 								"$ref": "AAAAAAFneNiRm3CHLk8="
 							},
 							"name": "Nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				},
