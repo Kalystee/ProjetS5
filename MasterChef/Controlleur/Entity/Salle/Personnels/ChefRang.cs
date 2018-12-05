@@ -8,16 +8,11 @@ namespace Controlleur.Entity.Salle.Personnels
 {
     public class ChefRang : P_Salle
     {
-        private ChefRang instance;
 
         private ChefRang(int id) : base(id)
         {
 
         }
-
-        public ChefRang GetInstance()
-        {
-            return null;
-        }
+        
     }
 }
