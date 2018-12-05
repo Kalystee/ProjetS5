@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Controlleur.Entity.Salle.Personnels
 {
-    public class MaitreHotel : P_Salle
+    public class Commis_S : P_Salle
     {
-        private static MaitreHotel instance;
+        private static Commis_S instance;
 
-        private MaitreHotel(int id) : base(id)
-        {
+        private Commis_S(int id) : base(id) {
 
         }
-        
-        public MaitreHotel GetInstance()
+
+        public Commis_S GetInstance()
         {
             return null;
         }
+
     }
 }

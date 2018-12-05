@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Controlleur.Entity.Salle.Personnels
 {
-    public class MaitreHotel : P_Salle
+    public class ChefRang : P_Salle
     {
-        private static MaitreHotel instance;
+        private ChefRang instance;
 
-        private MaitreHotel(int id) : base(id)
+        private ChefRang(int id) : base(id)
         {
 
         }
-        
-        public MaitreHotel GetInstance()
+
+        public ChefRang GetInstance()
         {
             return null;
         }

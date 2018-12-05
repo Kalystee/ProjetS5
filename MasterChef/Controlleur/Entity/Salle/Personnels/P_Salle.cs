@@ -23,7 +23,7 @@ namespace Controlleur.Entity.Salle.Personnels
         }
         
 
-        public P_Salle()
+        public P_Salle(int id)
         {
          
         }

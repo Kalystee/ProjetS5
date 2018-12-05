@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\Salle\Personnels\MaitreHotel.cs" />
+    <Compile Include="Entity\Salle\Personnels\P_Salle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entity\Cuisine\" />
-    <Folder Include="Entity\Salle\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
