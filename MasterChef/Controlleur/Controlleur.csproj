@@ -41,8 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Salle\Personnels\MaitreHotel.cs" />
-    <Compile Include="Entity\Salle\Personnels\P_Salle.cs" />
+    <Compile Include="Entity\Cuisine\Cuisine.cs" />
+    <Compile Include="Entity\Cuisine\Machine\Machine.cs" />
+    <Compile Include="Entity\Cuisine\Machine\MachineCuisson.cs" />
+    <Compile Include="Entity\Cuisine\Machine\MachineLavage.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\Chef.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\CommisCuisine.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\Cuisinier.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\PersonnelCuisine.cs" />
+    <Compile Include="Entity\Cuisine\Plat\Ingredient.cs" />
+    <Compile Include="Entity\Cuisine\Plat\Plat.cs" />
+    <Compile Include="Entity\Cuisine\Plat\PlatBuilder.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\Plongeur.cs" />
+    <Compile Include="Entity\Cuisine\Plat\TypePlat.cs" />
+    <Compile Include="Entity\Cuisine\Plat\ZoneConserv.cs" />
+    <Compile Include="Entity\Cuisine\Ustensile\GrosUstensile.cs" />
+    <Compile Include="Entity\Cuisine\Ustensile\PetitUstensile.cs" />
+    <Compile Include="Entity\Cuisine\Ustensile\Ustensile.cs" />
+    <Compile Include="Entity\Restaurant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +76,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entity\Cuisine\" />
+    <Folder Include="Entity\Interface\" />
+    <Folder Include="Entity\Salle\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

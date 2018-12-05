@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlleur.Entity.Cuisine
+namespace Controlleur.Entity.Cuisine.Ustensile
 {
-    class CommisCuisine
+    public class GrosUstensile
     {
     }
 }

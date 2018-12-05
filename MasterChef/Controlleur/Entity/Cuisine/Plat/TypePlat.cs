@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlleur.Entity.Cuisine
+namespace Controlleur.Entity.Cuisine.Plat
 {
-    class Cuisinier
+    public class TypePlat
     {
     }
 }
