@@ -13,5 +13,11 @@ namespace Test
             Chef chef = Chef.GetInstance();
             Assert.IsNotNull(chef,"Le chef n'est pas instancié");
         }
+
+        [TestMethod]
+        public void TestAddition()
+        {
+            Assert.Equals(2, add(1, 1));
+        }
     }
 }
