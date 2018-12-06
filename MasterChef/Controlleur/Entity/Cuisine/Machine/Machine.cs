@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Controlleur.Entity.Cuisine.Machine
 {
-    public class Machine
+    public abstract class Machine
     {
+        protected int Id;
+        protected string Nom;
+
+        public Machine(int id, string nom)
+        {
+
+        }
     }
 }

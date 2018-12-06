@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlleur.Entity.Cuisine
+namespace Controlleur.Entity.Interface
 {
-    public class PlatBuilder
+    public interface IUstensile
     {
+        void Notify();
     }
 }
