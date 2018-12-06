@@ -10,5 +10,20 @@ namespace Controlleur.Entity.Cuisine.Personnel
     public class Cuisinier
     {
         public PlatBuilder Builder { get; set; }
+
+        public void preparerPlat(Plat p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void allerCuire()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void préparerAccompagnement(Ingredient i)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

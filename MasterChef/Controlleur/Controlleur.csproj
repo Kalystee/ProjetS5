@@ -44,7 +44,6 @@
     <Compile Include="Entity\Cuisine\Cuisine.cs" />
     <Compile Include="Entity\Cuisine\Machines\Machine.cs" />
     <Compile Include="Entity\Cuisine\Machines\MachineCuisson.cs" />
-    <Compile Include="Entity\Cuisine\Machines\MachineLavage.cs" />
     <Compile Include="Entity\Cuisine\Personnel\Chef.cs" />
     <Compile Include="Entity\Cuisine\Personnel\CommisCuisine.cs" />
     <Compile Include="Entity\Cuisine\Personnel\Cuisinier.cs" />

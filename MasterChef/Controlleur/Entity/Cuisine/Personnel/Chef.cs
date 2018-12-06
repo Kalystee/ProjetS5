@@ -8,7 +8,7 @@ namespace Controlleur.Entity.Cuisine.Personnel
 {
     public class Chef : PersonnelCuisine
     {
-        Chef Instance;
+        private static Chef instance;
 
         private Chef(int id) : base(id)
         {
@@ -17,7 +17,11 @@ namespace Controlleur.Entity.Cuisine.Personnel
 
         public static Chef GetInstance()
         {
-            return null;
+            if(Chef.instance == null)
+            {
+                Chef.instance = new Chef(1);
+            }
+            return Chef.instance;
         }
     }
 }

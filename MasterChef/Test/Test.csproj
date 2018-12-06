@@ -54,9 +54,7 @@
     <Compile Include="Entity\Cuisine\Personnel\PlongeurTest.cs" />
     <Compile Include="Entity\Cuisine\Personnel\CommisCuisineTest.cs" />
     <Compile Include="Entity\Cuisine\Plats\ZoneConservTest.cs" />
-
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
