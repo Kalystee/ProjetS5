@@ -58,6 +58,7 @@
     <Compile Include="Entity\Cuisine\Ustensiles\GrosUstensile.cs" />
     <Compile Include="Entity\Cuisine\Ustensiles\PetitUstensile.cs" />
     <Compile Include="Entity\Cuisine\Ustensiles\Ustensile.cs" />
+    <Compile Include="Entity\Cuisine\Ustensiles\UstensileMediator.cs" />
     <Compile Include="Entity\Interface\Builder.cs" />
     <Compile Include="Entity\Interface\ICuisson.cs" />
     <Compile Include="Entity\Interface\ILaver.cs" />

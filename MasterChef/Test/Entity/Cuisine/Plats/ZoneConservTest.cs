@@ -14,7 +14,7 @@ namespace Test.Entity.Cuisine.Plats
         {
             Ingredient i = new Ingredient();
             this.zone.AddIngredient(i);
-            Assert.Equals(this.zone.ingredients[this.zone.ingredients.Count - 1], i);
+            Assert.Equals(this.zone.ingresdients[this.zone.ingredients.Count - 1], i);
         }
 
         [TestMethod]
