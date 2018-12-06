@@ -7,7 +7,20 @@ using Controlleur.Entity.Interface;
 
 namespace Controlleur.Entity.Cuisine.Machines
 {
-    public class LaveVaisselle
+    public class LaveVaisselle : Machine, ILaver
     {
+        public LaveVaisselle(int id, string nom) : base(id, nom)
+        {
+        }
+
+        public void Laver()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Recharger()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
