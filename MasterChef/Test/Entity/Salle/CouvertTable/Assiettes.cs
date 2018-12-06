@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Controlleur.Entity.Salle.CouvertTable
+namespace Test.Entity.Salle.CouvertTable
 {
-    public class Assiettes
+    [TestClass]
+    public class AsiettesTest
     {
+        [TestMethod]
+        public OpérationAssiettesTest()
+        {
+
+        }
     }
 }

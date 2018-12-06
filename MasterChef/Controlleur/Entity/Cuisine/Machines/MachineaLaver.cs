@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controlleur.Entity.Interface;
 
-namespace Controlleur.Entity.Client
+namespace Controlleur.Entity.Cuisine.Machines
 {
-    public class Client
+    public class MachineaLaver
     {
     }
 }
