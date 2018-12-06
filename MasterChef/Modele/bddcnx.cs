@@ -45,10 +45,6 @@ namespace Modele
             this.Adapter.Fill(this.DataSet);
             this.Connex.Close();
             return this.DataSet;
-
-
-            
-
         }
 
     }
