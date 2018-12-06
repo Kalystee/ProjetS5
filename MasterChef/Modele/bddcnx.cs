@@ -25,6 +25,10 @@ namespace Modele
             this.DataSet = new DataSet();
         }
 
+        /// <summary>
+        /// méthode permetant d'exécuter une requête préparée (update / delete)
+        /// </summary>
+        /// <param name="query">requête SQL</param>
         public void ActionRow(string query)
         {
             this.Connex.Open();
@@ -35,6 +39,12 @@ namespace Modele
                
         }
 
+        /// <summary>
+        /// méthode permetant d'exécuter une requête préparé et de récupérer son résultat (select)
+        /// </summary>
+        /// <param name="query">requête</param>
+        /// <param name="TableName">table cible</param>
+        /// <returns></returns>
         public DataSet GetRows(string query,string TableName)
         {
             this.Connex.Open();
