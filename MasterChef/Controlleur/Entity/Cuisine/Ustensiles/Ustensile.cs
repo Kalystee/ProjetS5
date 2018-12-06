@@ -10,7 +10,18 @@ namespace Controlleur.Entity.Cuisine.Ustensiles
     {
         protected int id { get; set; }
         protected string nom { get; set; }
-        protected bool estSale { get; set; }
+
+        protected bool estSale1;
+
+        public bool GetestSale()
+        {
+            return estSale1;
+        }
+
+        public void SetestSale(bool value)
+        {
+            estSale1 = value;
+        }
 
         public Ustensile(int _id, string _nom)
         {

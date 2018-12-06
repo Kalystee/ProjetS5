@@ -17,7 +17,7 @@ namespace Test.Entity.Cuisine.Personnel
             listU.Add(new GrosUstensile(1,"gros"));
             listU.Add(new PetitUstensile(2, "petit"));
             p.nettoyerUstensile(listU);
-            Assert.
+           
         }
     }
 }
