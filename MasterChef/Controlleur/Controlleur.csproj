@@ -42,22 +42,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Cuisine\Cuisine.cs" />
-    <Compile Include="Entity\Cuisine\Machine\Machine.cs" />
-    <Compile Include="Entity\Cuisine\Machine\MachineCuisson.cs" />
-    <Compile Include="Entity\Cuisine\Machine\MachineLavage.cs" />
+    <Compile Include="Entity\Cuisine\Machines\Machine.cs" />
+    <Compile Include="Entity\Cuisine\Machines\MachineCuisson.cs" />
+    <Compile Include="Entity\Cuisine\Machines\MachineLavage.cs" />
     <Compile Include="Entity\Cuisine\Personnel\Chef.cs" />
     <Compile Include="Entity\Cuisine\Personnel\CommisCuisine.cs" />
     <Compile Include="Entity\Cuisine\Personnel\Cuisinier.cs" />
     <Compile Include="Entity\Cuisine\Personnel\PersonnelCuisine.cs" />
-    <Compile Include="Entity\Cuisine\Plat\Ingredient.cs" />
-    <Compile Include="Entity\Cuisine\Plat\Plat.cs" />
-    <Compile Include="Entity\Cuisine\Plat\PlatBuilder.cs" />
+    <Compile Include="Entity\Cuisine\Plats\Ingredient.cs" />
+    <Compile Include="Entity\Cuisine\Plats\Plat.cs" />
+    <Compile Include="Entity\Cuisine\Plats\PlatBuilder.cs" />
     <Compile Include="Entity\Cuisine\Personnel\Plongeur.cs" />
-    <Compile Include="Entity\Cuisine\Plat\TypePlat.cs" />
-    <Compile Include="Entity\Cuisine\Plat\ZoneConserv.cs" />
-    <Compile Include="Entity\Cuisine\Ustensile\GrosUstensile.cs" />
-    <Compile Include="Entity\Cuisine\Ustensile\PetitUstensile.cs" />
-    <Compile Include="Entity\Cuisine\Ustensile\Ustensile.cs" />
+    <Compile Include="Entity\Cuisine\Plats\TypePlat.cs" />
+    <Compile Include="Entity\Cuisine\Plats\ZoneConserv.cs" />
+    <Compile Include="Entity\Cuisine\Ustensiles\GrosUstensile.cs" />
+    <Compile Include="Entity\Cuisine\Ustensiles\PetitUstensile.cs" />
+    <Compile Include="Entity\Cuisine\Ustensiles\Ustensile.cs" />
+    <Compile Include="Entity\Interface\Builder.cs" />
+    <Compile Include="Entity\Interface\ICuisson.cs" />
+    <Compile Include="Entity\Interface\ILaver.cs" />
+    <Compile Include="Entity\Interface\IUstensile.cs" />
     <Compile Include="Entity\Restaurant.cs" />
     <Compile Include="Entity\Salle\Personnel\ChefRang.cs" />
     <Compile Include="Entity\Salle\Personnel\Commis_S.cs" />
@@ -71,17 +75,11 @@
       <Project>{9203d906-8962-4d6a-ab49-4385da0db459}</Project>
       <Name>Modele</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Test\Test.csproj">
-      <Project>{fe5dca02-74ef-4259-b74b-b407fa288c25}</Project>
-      <Name>Test</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Vue\Vue.csproj">
       <Project>{b2306f60-b701-4533-bddb-dea0593d3eb5}</Project>
       <Name>Vue</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entity\Interface\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

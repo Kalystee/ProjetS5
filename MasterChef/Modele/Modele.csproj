@@ -44,15 +44,5 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Test\Test.csproj">
-      <Project>{fe5dca02-74ef-4259-b74b-b407fa288c25}</Project>
-      <Name>Test</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Vue\Vue.csproj">
-      <Project>{b2306f60-b701-4533-bddb-dea0593d3eb5}</Project>
-      <Name>Vue</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

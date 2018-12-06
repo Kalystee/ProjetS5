@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Controlleur.Entity.Interface;
 
-namespace Controlleur.Entity.Cuisine.Machine
+namespace Controlleur.Entity.Cuisine.Machines
 {
     public class MachineCuisson : Machine, ICuisson
     {

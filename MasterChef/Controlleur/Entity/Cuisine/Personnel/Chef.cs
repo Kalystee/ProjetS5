@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlleur.Entity.Cuisine
+namespace Controlleur.Entity.Cuisine.Personnel
 {
     public class Chef : PersonnelCuisine
     {
@@ -15,7 +15,7 @@ namespace Controlleur.Entity.Cuisine
 
         }
 
-        public Chef GetInstance()
+        public static Chef GetInstance()
         {
             return null;
         }

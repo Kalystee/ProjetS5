@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Controlleur.Entity.Cuisine.Personnel;
 
 namespace Test
 {
@@ -7,8 +8,10 @@ namespace Test
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestInstanceChef()
         {
+            Chef chef = Chef.GetInstance();
+            Assert.IsNotNull(chef,"Le chef n'est pas instancié");
         }
     }
 }

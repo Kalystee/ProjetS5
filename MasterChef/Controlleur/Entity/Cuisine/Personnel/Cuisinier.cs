@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Controlleur.Entity.Cuisine.Plats;
 
-namespace Controlleur.Entity.Cuisine
+namespace Controlleur.Entity.Cuisine.Personnel
 {
     public class Cuisinier
     {
