@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D7F85DA-BB94-460B-AAA0-6637302237BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Controlleur</RootNamespace>
+    <AssemblyName>Controlleur</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Client\Client.cs" />
+    <Compile Include="Entity\Client\Cool.cs" />
+    <Compile Include="Entity\Client\Normal.cs" />
+    <Compile Include="Entity\Client\Presse.cs" />
+    <Compile Include="Entity\Cuisine\Cuisine.cs" />
+    <Compile Include="Entity\Cuisine\Machines\Machine.cs" />
+    <Compile Include="Entity\Cuisine\Machines\MachineCuisson.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\Chef.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\CommisCuisine.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\Cuisinier.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\PersonnelCuisine.cs" />
+    <Compile Include="Entity\Cuisine\Plats\Ingredient.cs" />
+    <Compile Include="Entity\Cuisine\Plats\Plat.cs" />
+    <Compile Include="Entity\Cuisine\Plats\PlatBuilder.cs" />
+    <Compile Include="Entity\Cuisine\Personnel\Plongeur.cs" />
+    <Compile Include="Entity\Cuisine\Plats\TypePlat.cs" />
+    <Compile Include="Entity\Cuisine\Plats\ZoneConserv.cs" />
+    <Compile Include="Entity\Cuisine\Ustensiles\GrosUstensile.cs" />
+    <Compile Include="Entity\Cuisine\Ustensiles\PetitUstensile.cs" />
+    <Compile Include="Entity\Cuisine\Ustensiles\Ustensile.cs" />
+    <Compile Include="Entity\Cuisine\Ustensiles\UstensileMediator.cs" />
+    <Compile Include="Entity\Interface\Builder.cs" />
+    <Compile Include="Entity\Interface\ICuisson.cs" />
+    <Compile Include="Entity\Interface\ILaver.cs" />
+    <Compile Include="Entity\Interface\IUstensile.cs" />
+    <Compile Include="Entity\Restaurant.cs" />
+    <Compile Include="Entity\Salle\Disposition\Carre.cs" />
+    <Compile Include="Entity\Salle\Disposition\Rang.cs" />
+    <Compile Include="Entity\Salle\Disposition\Salle.cs" />
+    <Compile Include="Entity\Salle\Disposition\Table.cs" />
+    <Compile Include="Entity\Salle\MatosSalle\Bouteille.cs" />
+    <Compile Include="Entity\Salle\MatosSalle\Corbeille.cs" />
+    <Compile Include="Entity\Salle\MatosSalle\MastosSalle.cs" />
+    <Compile Include="Entity\Salle\Personnel\ChefRang.cs" />
+    <Compile Include="Entity\Salle\Personnel\Commis_S.cs" />
+    <Compile Include="Entity\Salle\Personnel\MaitreHotel.cs" />
+    <Compile Include="Entity\Salle\Personnel\P_Salle.cs" />
+    <Compile Include="Entity\Salle\Personnel\Serveur.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modele\Modele.csproj">
+      <Project>{9203d906-8962-4d6a-ab49-4385da0db459}</Project>
+      <Name>Modele</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vue\Vue.csproj">
+      <Project>{b2306f60-b701-4533-bddb-dea0593d3eb5}</Project>
+      <Name>Vue</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Release\Controlleur.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\Controlleur.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
