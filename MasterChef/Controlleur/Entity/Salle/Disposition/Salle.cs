@@ -8,5 +8,6 @@ namespace Controlleur.Entity.Salle.Disposition
 {
     public class Salle
     {
+        private int id;
     }
 }
