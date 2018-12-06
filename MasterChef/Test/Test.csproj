@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Client\ClientTest.cs" />
+    <Compile Include="Entity\Cuisine\Machines\MachineCuissonTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="UnitTest2.cs" />
