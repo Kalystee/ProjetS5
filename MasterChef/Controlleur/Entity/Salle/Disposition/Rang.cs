@@ -8,5 +8,6 @@ namespace Controlleur.Entity.Salle.Disposition
 {
     public class Rang
     {
+        private int id;
     }
 }

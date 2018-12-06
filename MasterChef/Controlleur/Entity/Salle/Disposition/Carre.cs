@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlleur.Entity.Client
+namespace Controlleur.Entity.Salle.Disposition
 {
-    public class Client
+    public class Carre
     {
+        private int id;
     }
 }
