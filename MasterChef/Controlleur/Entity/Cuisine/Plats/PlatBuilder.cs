@@ -9,6 +9,11 @@ namespace Controlleur.Entity.Cuisine.Plats
 {
     public class PlatBuilder : Builder
     {
+
+        public Plat Result { get; set; }
+
+
+
         public void CuirPlat()
         {
             throw new NotImplementedException();

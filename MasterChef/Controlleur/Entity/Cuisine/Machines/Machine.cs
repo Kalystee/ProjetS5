@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlleur.Entity.Cuisine.Machine
+namespace Controlleur.Entity.Cuisine.Machines
 {
-    public abstract class Machine
+    public class Machine
     {
         protected int Id;
         protected string Nom;

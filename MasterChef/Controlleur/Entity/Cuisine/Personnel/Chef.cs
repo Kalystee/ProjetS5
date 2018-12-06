@@ -8,9 +8,16 @@ namespace Controlleur.Entity.Cuisine
 {
     public class Chef : PersonnelCuisine
     {
-        public Chef(int id) : base(id)
+        Chef Instance;
+
+        private Chef(int id) : base(id)
         {
 
+        }
+
+        public Chef GetInstance()
+        {
+            return null;
         }
     }
 }
