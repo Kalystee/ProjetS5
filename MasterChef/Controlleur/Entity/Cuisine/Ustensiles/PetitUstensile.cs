@@ -5,8 +5,10 @@ using System.Text;
 
 namespace Controlleur.Entity.Cuisine.Ustensiles
 {
-    public class PetitUstensile
+    public class PetitUstensile : Ustensile
     {
-        
+        public PetitUstensile(int _id, string _nom) : base(_id, _nom)
+        {
+        }
     }
 }

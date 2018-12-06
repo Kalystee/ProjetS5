@@ -7,12 +7,12 @@ using Controlleur.Entity.Interface;
 
 namespace Controlleur.Entity.Cuisine.Ustensiles
 {
-    public class Ustensile : IUstensile
+    public class UstensileMediator : IUstensile
     {
         public List<GrosUstensile> ListGrosUstensiles { get;  }
         public List<PetitUstensile> ListPetitUstensiles { get; }
 
-        public Ustensile()
+        public UstensileMediator()
         {
 
         }

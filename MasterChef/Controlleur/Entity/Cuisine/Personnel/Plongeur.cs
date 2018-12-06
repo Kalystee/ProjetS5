@@ -8,5 +8,9 @@ namespace Controlleur.Entity.Cuisine.Personnel
 {
     public class Plongeur
     {
+        public Plongeur()
+        {
+
+        }
     }
 }

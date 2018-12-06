@@ -3,23 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Controlleur.Entity.Interface;
 
 namespace Controlleur.Entity.Cuisine.Ustensiles
 {
-    public class Ustensile : IUstensile
+    public abstract class Ustensile
     {
-        public List<GrosUstensile> ListGrosUstensiles { get;  }
-        public List<PetitUstensile> ListPetitUstensiles { get; }
+        protected int id { get; set; }
+        protected string nom { get; set; }
+        protected bool estSale { get; set; }
 
-        public Ustensile()
+        public Ustensile(int _id, string _nom)
         {
 
-        }
-
-        public void Notify()
-        {
-            throw new NotImplementedException();
         }
     }
 }
