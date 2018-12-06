@@ -1,77 +1,74 @@
-#------------------------------------------------------------
-#        Script MySQL.
-#------------------------------------------------------------
+/*------------------------------------------------------------
+*        Script SQLSERVER 
+------------------------------------------------------------*/
 
 
-#------------------------------------------------------------
-# Table: ZONE_STOCKAGE
-#------------------------------------------------------------
-
+/*------------------------------------------------------------
+-- Table: ZONE_STOCKAGE
+------------------------------------------------------------*/
 CREATE TABLE ZONE_STOCKAGE(
-        Id               Int  Auto_increment  NOT NULL ,
-        Nom              Varchar (255) NOT NULL ,
-        Quantite_Max     Int NOT NULL ,
-        Tps_Conservation Time NOT NULL
-	,CONSTRAINT ZONE_STOCKAGE_PK PRIMARY KEY (Id)
-)ENGINE=InnoDB;
+	Id                 INT IDENTITY (1,1) NOT NULL ,
+	Nom                VARCHAR (255) NOT NULL ,
+	Quantite_Max       INT  NOT NULL ,
+	Tps_Conservation   TIME (2) NOT NULL  ,
+	CONSTRAINT ZONE_STOCKAGE_PK PRIMARY KEY (Id)
+);
 
 
-#------------------------------------------------------------
-# Table: INGREDIENT
-#------------------------------------------------------------
-
+/*------------------------------------------------------------
+-- Table: INGREDIENT
+------------------------------------------------------------*/
 CREATE TABLE INGREDIENT(
-        Id               Int  Auto_increment  NOT NULL ,
-        Nom              Varchar (255) NOT NULL ,
-        Quantite         Int NOT NULL ,
-        DLC              Date NOT NULL ,
-        Id_ZONE_STOCKAGE Int NOT NULL
-	,CONSTRAINT INGREDIENT_PK PRIMARY KEY (Id)
+	Id                 INT IDENTITY (1,1) NOT NULL ,
+	Nom                VARCHAR (255) NOT NULL ,
+	Quantite           INT  NOT NULL ,
+	DLC                DATETIME NOT NULL ,
+	Id_ZONE_STOCKAGE   INT  NOT NULL  ,
+	CONSTRAINT INGREDIENT_PK PRIMARY KEY (Id)
 
 	,CONSTRAINT INGREDIENT_ZONE_STOCKAGE_FK FOREIGN KEY (Id_ZONE_STOCKAGE) REFERENCES ZONE_STOCKAGE(Id)
-)ENGINE=InnoDB;
+);
 
 
-#------------------------------------------------------------
-# Table: TYPE_RECETTE
-#------------------------------------------------------------
-
+/*------------------------------------------------------------
+-- Table: TYPE_RECETTE
+------------------------------------------------------------*/
 CREATE TABLE TYPE_RECETTE(
-        Id  Int  Auto_increment  NOT NULL ,
-        Nom Varchar (10) NOT NULL
-	,CONSTRAINT TYPE_RECETTE_PK PRIMARY KEY (Id)
-)ENGINE=InnoDB;
+	Id    INT IDENTITY (1,1) NOT NULL ,
+	Nom   VARCHAR (10) NOT NULL  ,
+	CONSTRAINT TYPE_RECETTE_PK PRIMARY KEY (Id)
+);
 
 
-#------------------------------------------------------------
-# Table: RECETTE
-#------------------------------------------------------------
-
+/*------------------------------------------------------------
+-- Table: RECETTE
+------------------------------------------------------------*/
 CREATE TABLE RECETTE(
-        Id              Int  Auto_increment  NOT NULL ,
-        Nom             Varchar (255) NOT NULL ,
-        Tps_Cuisson     Time NOT NULL ,
-        Tps_Preparation Time NOT NULL ,
-        Tps_Repos       Time NOT NULL ,
-        Nb_Personne     Int NOT NULL ,
-        Accompagnement  Varchar (10) NOT NULL ,
-        Id_TYPE_RECETTE Int NOT NULL
-	,CONSTRAINT RECETTE_PK PRIMARY KEY (Id)
+	Id                INT IDENTITY (1,1) NOT NULL ,
+	Nom               VARCHAR (255) NOT NULL ,
+	Tps_Cuisson       TIME (2) NOT NULL ,
+	Tps_Preparation   TIME (2) NOT NULL ,
+	Tps_Repos         TIME (2) NOT NULL ,
+	Nb_Personne       INT  NOT NULL ,
+	Accompagnement    VARCHAR (10) NOT NULL ,
+	Id_TYPE_RECETTE   INT  NOT NULL  ,
+	CONSTRAINT RECETTE_PK PRIMARY KEY (Id)
 
 	,CONSTRAINT RECETTE_TYPE_RECETTE_FK FOREIGN KEY (Id_TYPE_RECETTE) REFERENCES TYPE_RECETTE(Id)
-)ENGINE=InnoDB;
+);
 
 
-#------------------------------------------------------------
-# Table: composer
-#------------------------------------------------------------
-
+/*------------------------------------------------------------
+-- Table: composer
+------------------------------------------------------------*/
 CREATE TABLE composer(
-        Id            Int NOT NULL ,
-        Id_INGREDIENT Int NOT NULL
-	,CONSTRAINT composer_PK PRIMARY KEY (Id,Id_INGREDIENT)
+	Id              INT  NOT NULL ,
+	Id_INGREDIENT   INT  NOT NULL  ,
+	CONSTRAINT composer_PK PRIMARY KEY (Id,Id_INGREDIENT)
 
 	,CONSTRAINT composer_RECETTE_FK FOREIGN KEY (Id) REFERENCES RECETTE(Id)
 	,CONSTRAINT composer_INGREDIENT0_FK FOREIGN KEY (Id_INGREDIENT) REFERENCES INGREDIENT(Id)
-)ENGINE=InnoDB;
+);
+
+
 

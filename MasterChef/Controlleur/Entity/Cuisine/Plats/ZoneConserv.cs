@@ -14,5 +14,7 @@ namespace Controlleur.Entity.Cuisine.Plats
         public int QuantitéMax { get; set; }
         public int TempsConserv { get; set; }
         public List<Ingredient> ingredients { get; set; }
+
+        
     }
 }

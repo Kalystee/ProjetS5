@@ -10,8 +10,8 @@ namespace Controlleur.Entity.Salle.MatosSalle
     public class MatosSalle : IMatosSalle
 
     {
-        private List<Corbeille> corbeille;
-        private List<Bouteille> bouteille;
+        private List<Corbeille> corbeilles;
+        private List<Bouteille> bouteilles;
 
         public MatosSalle()
             {
