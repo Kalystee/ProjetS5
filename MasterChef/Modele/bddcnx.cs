@@ -15,7 +15,7 @@ namespace Modele
         public SqlCommand Command { get; set; }
         public SqlDataAdapter Adapter { get; set; }
         public DataSet DataSet { get; set; }
-        
+
         public CnxBDD()
         {
             this.ChaineConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\MasterChef.mdf;Integrated Security=True;Connect Timeout=30";
@@ -36,7 +36,7 @@ namespace Modele
             this.Command.Prepare();
             this.Command.ExecuteNonQuery();
             this.Connex.Close();
-               
+
         }
 
         /// <summary>
@@ -45,12 +45,12 @@ namespace Modele
         /// <param name="query">requête</param>
         /// <param name="TableName">table cible</param>
         /// <returns></returns>
-        public DataSet GetRows(string query,string TableName)
+        public DataSet GetRows(string query, string TableName)
         {
             this.Connex.Open();
             this.Command.CommandText = query;
             this.Command.Prepare();
-            this.Adapter.TableMappings.Add("Table",TableName);
+            this.Adapter.TableMappings.Add("Table", TableName);
             this.DataSet.DataSetName = TableName;
             this.Adapter.Fill(this.DataSet);
             this.Connex.Close();
