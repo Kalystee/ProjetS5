@@ -17,7 +17,7 @@ namespace Test
         [TestMethod]
         public void TestAddition()
         {
-            Assert.Equals(2, add(1, 1));
+            Assert.Equals(2, (1 + 1));
         }
     }
 }
