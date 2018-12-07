@@ -20,14 +20,9 @@ namespace Test.Entity.Client
         [TestMethod]
         public void commanderPlat()
         {
-            public class plat
-        {
 
         }
             
-            Assert.AreEqual()
-
-        }
 
         [TestMethod]
         public void quitter()
