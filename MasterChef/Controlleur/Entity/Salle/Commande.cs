@@ -3,27 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controlleur.Entity.Salle.Disposition;
 using Controlleur.Entity.Cuisine.Plats;
 
-namespace Controlleur.Entity.Salle.Personnels
+namespace Controlleur.Entity.Salle
 {
-    public class Serveur : P_Salle
+    public class Commande
     {
+        private Table table;
         private Plat plat;
 
-        public Serveur(int id) : base(id)
+        public Commande(Table table,Plat plat)
         {
 
         }
 
-        public void ReceptionPlat()
+        public Plat GetPlat()
         {
-
-        }
-
-        public void ServirPlat()
-        {
-
+            return plat;
         }
     }
 }
