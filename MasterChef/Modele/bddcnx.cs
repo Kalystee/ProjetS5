@@ -26,9 +26,9 @@ namespace Modele
         }
 
         /// <summary>
-        /// méthode permetant d'exécuter une requête préparée (update / delete)
+        ///  Execute a prepared query (INSERT, UPDATE, DELETE)
         /// </summary>
-        /// <param name="query">requête SQL</param>
+        /// <param name="query">query string</param>
         public void ActionRow(string query)
         {
             this.Connex.Open();
@@ -40,10 +40,10 @@ namespace Modele
         }
 
         /// <summary>
-        /// méthode permetant d'exécuter une requête préparé et de récupérer son résultat (select)
+        /// Execute a prepared query and get a Dataset of the query (SELECT)
         /// </summary>
-        /// <param name="query">requête</param>
-        /// <param name="TableName">table cible</param>
+        /// <param name="query">>query string</param>
+        /// <param name="TableName">table target</param>
         /// <returns></returns>
         public DataSet GetRows(string query, string TableName)
         {
