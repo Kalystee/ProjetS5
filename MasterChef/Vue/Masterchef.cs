@@ -27,7 +27,8 @@ namespace Vue
         {
             string nbr_client;
             nbr_client = textBox1.Text;
-            MessageBox.Show(nbr_client);
+            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
