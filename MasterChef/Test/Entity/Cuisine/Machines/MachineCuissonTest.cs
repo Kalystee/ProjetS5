@@ -6,8 +6,8 @@ namespace Test.Entity.Cuisine.Machines
     [TestClass]
     public class MachineCuissonTest
     {
-       
-        {[TestMethod]
+       /*
+        [TestMethod]
         public void TestCuisson()
         {
             Machinecuisson c = new MachineCuisson();
@@ -18,6 +18,6 @@ namespace Test.Entity.Cuisine.Machines
             z.listAliment.Add(b);
             z.Cuisson();
             Assert.IsFalse(b.isNoncuisiner);
-        }
+        }*/
     }
-    }
+}

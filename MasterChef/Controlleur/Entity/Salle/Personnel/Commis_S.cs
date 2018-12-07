@@ -14,9 +14,13 @@ namespace Controlleur.Entity.Salle.Personnels
 
         }
 
-        public Commis_S GetInstance()
+        public static Commis_S GetInstance()
         {
-            return null;
+            if (Commis_S.instance == null)
+            {
+                Commis_S.instance = new Commis_S(40);
+            }
+            return Commis_S.instance;
         }
 
     }
