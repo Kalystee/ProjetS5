@@ -18,7 +18,7 @@ namespace Controlleur.Entity.Client
         public Client(Commande commande)
         {
             this.Commande = commande;
-            commande.CommanderPlat();   //Client choose a plat
+            commande.CommanderPlat();   //Client order
 
         }
     }
