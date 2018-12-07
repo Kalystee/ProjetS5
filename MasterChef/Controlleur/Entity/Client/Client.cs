@@ -12,16 +12,25 @@ namespace Controlleur.Entity.Client
 {
     public class Client
     {
+        public Table Table { get; set; }
 
-        public Commande Commande { get; set; }
-
-        public Client(Commande commande)
+        public Client()
         {
-            this.Commande = commande;
-            commande.CommanderPlat();   //Client order
 
         }
-    }
 
-    
+        /// <summary>
+        /// methode : Client order something only if a table is  available for eating
+        /// </summary>
+        public void CommanderPlat()
+        {
+            Table table = new Table();
+
+            if (table.Disponible == true)
+            {
+                Commande commande = new Commande(new Table(), new Plat());
+            }
+ 
+        }
+    }
 }
