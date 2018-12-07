@@ -19,6 +19,8 @@ namespace Controlleur.Entity.Salle.Disposition
         {
             this.id = _id;
             this.rangs = new List<Rang>();
+            this.chefRang = new ChefRang(11);
+            this.serveur = new Serveur(12);
 
             for (int i = 0; i < 2; i++){
                 this.rangs.Add(new Rang(i));

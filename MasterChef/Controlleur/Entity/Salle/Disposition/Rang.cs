@@ -10,5 +10,15 @@ namespace Controlleur.Entity.Salle.Disposition
     {
         private int id;
         private List<Table> tables;
+
+        public Rang(int _id)
+        {
+            this.id = _id;
+            this.tables = new List<Table>();
+            for(int i = 0; i < 2; i++)
+            {
+                this.tables.Add(new Table(i,4));
+            }
+        }
     }
 }
