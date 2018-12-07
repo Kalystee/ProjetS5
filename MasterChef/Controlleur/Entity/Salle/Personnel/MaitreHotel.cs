@@ -15,7 +15,7 @@ namespace Controlleur.Entity.Salle.Personnels
 
         }
         
-        public MaitreHotel GetInstance()
+        public static MaitreHotel GetInstance()
         {
             return null;
         }

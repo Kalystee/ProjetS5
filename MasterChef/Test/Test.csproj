@@ -49,14 +49,44 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\Client\ClientTest.cs" />
+    <Compile Include="Entity\Client\Cool.cs" />
+    <Compile Include="Entity\Client\Normal.cs" />
+    <Compile Include="Entity\Client\Presse.cs" />
+    <Compile Include="Entity\Cuisine\Machines\MachineCuissonTest.cs" />
     <Compile Include="Entity\Cuisine\Personnel\ChefTest.cs" />
     <Compile Include="Entity\Cuisine\Personnel\CuisinierTest.cs" />
     <Compile Include="Entity\Cuisine\Personnel\PlongeurTest.cs" />
     <Compile Include="Entity\Cuisine\Personnel\CommisCuisineTest.cs" />
     <Compile Include="Entity\Cuisine\Plats\ZoneConservTest.cs" />
+    <Compile Include="Entity\Interface\Builder.cs" />
+    <Compile Include="Entity\Interface\IBehaviour.cs" />
+    <Compile Include="Entity\Interface\ICouvertTable.cs" />
+    <Compile Include="Entity\Interface\ICuisson.cs" />
+    <Compile Include="Entity\Interface\ILaver.cs" />
+    <Compile Include="Entity\Interface\IMatosSalle.cs" />
+    <Compile Include="Entity\Interface\IUstensile.cs" />
+    <Compile Include="Entity\Salle\CouvertTable\Assiettes.cs" />
+    <Compile Include="Entity\Salle\CouvertTable\Couverts.cs" />
+    <Compile Include="Entity\Salle\CouvertTable\CouvertTable.cs" />
+    <Compile Include="Entity\Salle\CouvertTable\Tissus.cs" />
+    <Compile Include="Entity\Salle\CouvertTable\Verres.cs" />
+    <Compile Include="Entity\Salle\Disposition\Carré.cs" />
+    <Compile Include="Entity\Salle\Disposition\Rang.cs" />
+    <Compile Include="Entity\Salle\Disposition\Salle.cs" />
+    <Compile Include="Entity\Salle\Disposition\Table.cs" />
+    <Compile Include="Entity\Salle\MatosSalle\Bouteille.cs" />
+    <Compile Include="Entity\Salle\MatosSalle\Corbeille.cs" />
+    <Compile Include="Entity\Salle\MatosSalle\MastosSalle.cs" />
+    <Compile Include="Entity\Salle\Personnel\MaitreHotelTest.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="obj\Debug\Test.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Test.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entity\Cuisine\Ustensiles\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
