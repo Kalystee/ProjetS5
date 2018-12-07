@@ -32,7 +32,7 @@ namespace Controlleur.Entity.Salle.Personnels
         /// <summary>
         /// methode : Client order something only if a table is  available for eating
         /// </summary>
-        public void CommanderPlat()
+        public void CreerCommander()
         {
             Table table = new Table();
 
