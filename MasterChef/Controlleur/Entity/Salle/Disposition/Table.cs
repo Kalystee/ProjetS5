@@ -13,6 +13,7 @@ namespace Controlleur.Entity.Salle.Disposition
         public int NbPlace { get;}
         public  Client Client { get; set; }
 
+
         /// <summary>
         /// Constructor of a table
         /// </summary>

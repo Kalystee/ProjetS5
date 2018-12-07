@@ -24,6 +24,7 @@ namespace Controlleur.Entity.Salle
             this.Plat = plat;
         }
 
+
         /// <summary>
         /// methode : Client order something only if a table is  available for eating
         /// </summary>
@@ -35,6 +36,8 @@ namespace Controlleur.Entity.Salle
             {
                 Commande commande = new Commande(new Table(), new Plat());
             }
+
+
         }
 
     }
