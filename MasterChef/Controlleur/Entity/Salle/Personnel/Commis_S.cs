@@ -10,7 +10,7 @@ namespace Controlleur.Entity.Salle.Personnels
     {
         private static Commis_S instance;
 
-        private Commis_S(int id) : base(id) {
+        public Commis_S(int id) : base(id) {
 
         }
 

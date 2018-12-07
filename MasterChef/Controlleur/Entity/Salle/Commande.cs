@@ -10,20 +10,14 @@ namespace Controlleur.Entity.Salle
 {
     public class Commande
     {
-        private Table table;
-        private Plat plat;
+        public Table Table { get; set; }
+        public Plat Plat { get; set; }
 
         public Commande(Table table,Plat plat)
         {
-            this.table = table;
-            this.plat = plat;
+            this.Table = table;
+            this.Plat = plat;
         }
-
-        public Plat GetPlat()
-        {
-            return plat;
-        }
-
-
+       
     }
 }

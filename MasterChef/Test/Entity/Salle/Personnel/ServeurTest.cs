@@ -17,7 +17,7 @@ namespace Test.Entity.Salle.Personnel
             Serveur serveur = new Serveur(20);
 
             serveur.Commande = new Commande(new Table(),new Plat());
-            serveur.Commande.GetPlat().EstPret = true;
+            serveur.Commande.Plat.EstPret = true;
             serveur.ServirCommande();
             Assert.IsNull(serveur.Commande);
         }
