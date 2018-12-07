@@ -11,6 +11,7 @@ namespace Controlleur.Entity.Salle.Disposition
         public int Id {get; set;}
         public int NbPlace { get; set; }
         public bool Disponible { get; set; }
+        public Commande Commande { get; set; }
 
         public Table()
         {
