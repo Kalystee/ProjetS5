@@ -11,6 +11,8 @@ namespace Controlleur.Entity.Cuisine.Personnel
     {
         public PlatBuilder Builder { get; set; }
 
+        public Plat PlatAPréparer { get; set; }
+
         public void preparerPlat(Plat p)
         {
             throw new NotImplementedException();
