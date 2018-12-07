@@ -10,13 +10,17 @@ namespace Controlleur.Entity.Salle.Personnels
     {
         private static Commis_S instance;
 
-        public Commis_S(int id) : base(id) {
+        private Commis_S(int id) : base(id) {
 
         }
 
-        public Commis_S GetInstance()
+        public static Commis_S GetInstance()
         {
-            return null;
+            if (Commis_S.instance == null)
+            {
+                Commis_S.instance = new Commis_S(40);
+            }
+            return Commis_S.instance;
         }
 
     }
