@@ -70,6 +70,7 @@
     <Compile Include="Entity\Interface\IMatosSalle.cs" />
     <Compile Include="Entity\Interface\IUstensile.cs" />
     <Compile Include="Entity\Restaurant.cs" />
+    <Compile Include="Entity\Salle\Commande.cs" />
     <Compile Include="Entity\Salle\CouvertTable\Assiettes.cs" />
     <Compile Include="Entity\Salle\CouvertTable\Couverts.cs" />
     <Compile Include="Entity\Salle\CouvertTable\CouvertTable.cs" />

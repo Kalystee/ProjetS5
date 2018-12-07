@@ -15,12 +15,15 @@ namespace Controlleur.Entity.Salle
 
         public Commande(Table table,Plat plat)
         {
-
+            this.table = table;
+            this.plat = plat;
         }
 
         public Plat GetPlat()
         {
             return plat;
         }
+
+
     }
 }
