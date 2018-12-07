@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controlleur.Entity.Salle.Personnels;
 
 namespace Controlleur.Entity.Salle.Disposition
 {
@@ -10,5 +11,23 @@ namespace Controlleur.Entity.Salle.Disposition
     {
         private int id;
         private List<Rang> rangs;
+        private ChefRang chefRang;
+        private Serveur serveur;
+
+        /// <summary>
+        /// Constructor of a Carre
+        /// </summary>
+        /// <param name="_id">Id of the carre</param>
+        public Carre(int _id)
+        {
+            this.id = _id;
+            this.rangs = new List<Rang>();
+            this.chefRang = new ChefRang(11);
+            this.serveur = new Serveur(12);
+
+            for (int i = 0; i < 2; i++){
+                this.rangs.Add(new Rang(i));
+            }
+        }
     }
 }
