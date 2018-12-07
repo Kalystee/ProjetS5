@@ -8,7 +8,14 @@ namespace Controlleur.Entity.Salle.Disposition
 {
     public class Table
     {
-        private int id;
-        private int nbPlace;
+        public int Id {get; set;}
+        public int NbPlace { get; set; }
+        public bool Disponible { get; set; }
+
+        public Table()
+        {
+
+        }
+
     }
 }

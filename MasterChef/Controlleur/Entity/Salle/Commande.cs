@@ -18,6 +18,16 @@ namespace Controlleur.Entity.Salle
             this.Table = table;
             this.Plat = plat;
         }
-       
+
+        public void CommanderPlat()
+        {
+            Table table = new Table();
+
+            if (table.Disponible == true)
+            {
+                Commande commande = new Commande(new Table(), new Plat());
+            }
+        }
+
     }
 }
