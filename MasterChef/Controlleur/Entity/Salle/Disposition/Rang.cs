@@ -11,6 +11,10 @@ namespace Controlleur.Entity.Salle.Disposition
         private int id;
         private List<Table> tables;
 
+        /// <summary>
+        /// Constructor of a Rang
+        /// </summary>
+        /// <param name="_id">Id of the rang</param>
         public Rang(int _id)
         {
             this.id = _id;

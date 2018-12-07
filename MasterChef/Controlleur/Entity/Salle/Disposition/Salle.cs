@@ -14,6 +14,10 @@ namespace Controlleur.Entity.Salle.Disposition
         private MaitreHotel maitreHotel;
         private Commis_S commis_S;
 
+        /// <summary>
+        /// Constructor of Salle
+        /// </summary>
+        /// <param name="num">Id of Salle</param>
         public Salle(int num)
         {
             this.id = num;

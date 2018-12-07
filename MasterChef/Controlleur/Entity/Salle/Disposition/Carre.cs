@@ -14,7 +14,10 @@ namespace Controlleur.Entity.Salle.Disposition
         private ChefRang chefRang;
         private Serveur serveur;
 
-
+        /// <summary>
+        /// Constructor of a Carre
+        /// </summary>
+        /// <param name="_id">Id of the carre</param>
         public Carre(int _id)
         {
             this.id = _id;
