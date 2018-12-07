@@ -9,5 +9,6 @@ namespace Controlleur.Entity.Salle.Disposition
     public class Salle
     {
         private int id;
+        private List<Carre> carres;
     }
 }
