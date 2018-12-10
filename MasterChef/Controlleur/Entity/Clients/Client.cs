@@ -18,6 +18,7 @@ namespace Controlleur.Entity.Clients
         public Commande Commande { get; set; }
         public IBehaviour Behaviour { get; set; }
 
+
         /// <summary>
         /// Constructor of a Client
         /// </summary>
@@ -27,7 +28,15 @@ namespace Controlleur.Entity.Clients
         {
             this.Name = _name;
             this.nbPers = _nbPers;
+
+            
         }
+
+        
+
+
+
+
 
         /// <summary>
         /// A client can choose dishes of the restaurant menu
@@ -37,7 +46,5 @@ namespace Controlleur.Entity.Clients
         {
             return null;
         }
-    }
-
-    
+    }  
 }
