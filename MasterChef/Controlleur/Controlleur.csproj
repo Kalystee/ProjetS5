@@ -41,10 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Client\Client.cs" />
-    <Compile Include="Entity\Client\Cool.cs" />
-    <Compile Include="Entity\Client\Normal.cs" />
-    <Compile Include="Entity\Client\Presse.cs" />
+    <Compile Include="CuisineController.cs" />
+    <Compile Include="Entity\Clients\Client.cs" />
+    <Compile Include="Entity\Clients\Cool.cs" />
+    <Compile Include="Entity\Clients\Normal.cs" />
+    <Compile Include="Entity\Clients\Presse.cs" />
     <Compile Include="Entity\Cuisine\Cuisine.cs" />
     <Compile Include="Entity\Cuisine\Machines\Machine.cs" />
     <Compile Include="Entity\Cuisine\Machines\MachineCuisson.cs" />

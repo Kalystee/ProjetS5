@@ -21,7 +21,7 @@ namespace Modele
             this.ChaineConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\MasterChef.mdf;Integrated Security=True;Connect Timeout=30";
             this.Connex = new SqlConnection(this.ChaineConnection);
             this.Command = new SqlCommand("", this.Connex);
-            this.Adapter = new SqlDataAdapter();
+            this.Adapter = new SqlDataAdapter("",this.Connex);
             this.DataSet = new DataSet();
         }
 
@@ -31,12 +31,22 @@ namespace Modele
         /// <param name="query">query string</param>
         public void ActionRow(string query)
         {
-            this.Connex.Open();
-            this.Command.CommandText = query;
-            this.Command.Prepare();
-            this.Command.ExecuteNonQuery();
-            this.Connex.Close();
+            try
+            {
+                this.Connex.Open();
+                this.Command.CommandText = query;
+                this.Command.Prepare();
+                this.Command.ExecuteNonQuery();
 
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+            finally
+            {
+                this.Connex.Close();
+            }
         }
 
         /// <summary>
@@ -45,17 +55,25 @@ namespace Modele
         /// <param name="query">>query string</param>
         /// <param name="TableName">table target</param>
         /// <returns></returns>
-        public DataSet GetRows(string query, string TableName)
+        public DataSet GetRows(string query, string tableName)
         {
-            this.Connex.Open();
-            this.Command.CommandText = query;
-            this.Command.Prepare();
-            this.Adapter.TableMappings.Add("Table", TableName);
-            this.DataSet.DataSetName = TableName;
-            this.Adapter.Fill(this.DataSet);
-            this.Connex.Close();
+            try
+            {
+                this.Connex.Open();
+                this.Adapter.SelectCommand.CommandText = query;
+                this.Adapter.SelectCommand.Prepare();
+
+                this.Adapter.Fill(this.DataSet,tableName);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+            finally
+            {
+                this.Connex.Close();
+            }
             return this.DataSet;
         }
-
     }
 }

@@ -31,11 +31,11 @@ namespace Controlleur.Entity.Salle.Personnels
 
         public void ServirCommande()
         {
-            Serveur serveur = new Serveur(20);
+            /*Serveur serveur = new Serveur(20);
 
-            serveur.Commande = new Commande(new Table(), new Plat());
+            serveur.Commande = new Commande(new Table(1,), new Plat());
             serveur.Commande.Plat.EstPret = true;
-            serveur.ServirCommande();
+            serveur.ServirCommande();*/
         }
     }
 }

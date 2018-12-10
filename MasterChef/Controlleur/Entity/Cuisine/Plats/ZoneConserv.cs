@@ -13,13 +13,24 @@ namespace Controlleur.Entity.Cuisine.Plats
         public string Nom { get; set; }
         public int QuantitéMax { get; set; }
         public int TempsConserv { get; set; }
+        //public List<Ingredient> ingredients { get; set; }
 
-        public void AddIngredient(Ingredient i)
+        public string GetIngredientsOfZone()
         {
-            throw new NotImplementedException();
+            return "SELECT * FROM INGREDIENT WHERE Id_ZONE_STOCKAGE IN (SELECT Id FROM ZONE_STOCKAGE WHERE Id =" + this.Id+";";
         }
 
-        public List<Ingredient> ingredients { get; set; }
+        /*public string AddIngredientsInZ()
+        {
+            return "INSERT INTO INGREDIENT (Nom,QuantiteMax) VALUES();";
+        }*/
+        
+        public void AddIngredient(Ingredient i)
+        {
+            
+        }
+
+        
 
         public void DeleteIngredient(Ingredient i)
         {

@@ -24,21 +24,5 @@ namespace Controlleur.Entity.Salle
             this.Plat = plat;
         }
 
-
-        /// <summary>
-        /// methode : Client order something only if a table is  available for eating
-        /// </summary>
-        public void CommanderPlat()
-        {
-            Table table = new Table();
-
-            if (table.Disponible == true)
-            {
-                Commande commande = new Commande(new Table(), new Plat());
-            }
-
-
-        }
-
     }
 }
