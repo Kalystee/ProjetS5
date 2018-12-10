@@ -94,7 +94,7 @@
             // 
             // hour
             // 
-            this.hour.Location = new System.Drawing.Point(1112, 572);
+            this.hour.Location = new System.Drawing.Point(1124, 572);
             this.hour.Name = "hour";
             this.hour.Size = new System.Drawing.Size(26, 20);
             this.hour.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             // minute
             // 
-            this.minute.Location = new System.Drawing.Point(1144, 572);
+            this.minute.Location = new System.Drawing.Point(1161, 572);
             this.minute.Name = "minute";
             this.minute.Size = new System.Drawing.Size(26, 20);
             this.minute.TabIndex = 5;
@@ -114,7 +114,7 @@
             // 
             // second
             // 
-            this.second.Location = new System.Drawing.Point(1176, 572);
+            this.second.Location = new System.Drawing.Point(1200, 572);
             this.second.Name = "second";
             this.second.Size = new System.Drawing.Size(26, 20);
             this.second.TabIndex = 6;
@@ -124,7 +124,7 @@
             // 
             // day
             // 
-            this.day.Location = new System.Drawing.Point(1080, 572);
+            this.day.Location = new System.Drawing.Point(1084, 572);
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(26, 20);
             this.day.TabIndex = 7;
@@ -218,6 +218,7 @@
             this.Name = "Masterchef";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "MasterChef";
+            this.Load += new System.EventHandler(this.Masterchef_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);

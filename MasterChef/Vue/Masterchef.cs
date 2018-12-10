@@ -154,5 +154,10 @@ namespace Vue
                 day.Text = "0";
             }
         }
+
+        private void Masterchef_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
