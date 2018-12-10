@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controlleur.Entity.Cuisine.Plats;
+using Controlleur.Entity.Salle.Disposition;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +26,20 @@ namespace Controlleur.Entity.Salle.Personnels
             return MaitreHotel.instance;
              
       
+
+        }
+
+        /// <summary>
+        /// methode : Client order something only if a table is  available for eating
+        /// </summary>
+        public void CreerCommander()
+        {
+            Table table = new Table();
+
+            if (table.EstDisponible == true)
+            {
+                Commande commande = new Commande(new Table(), new Plat());
+            }
 
         }
     }
