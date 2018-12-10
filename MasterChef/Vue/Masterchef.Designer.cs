@@ -218,6 +218,7 @@
             this.Name = "Masterchef";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "MasterChef";
+            this.Load += new System.EventHandler(this.Masterchef_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
