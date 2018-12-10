@@ -18,7 +18,7 @@ namespace Modele
 
         public CnxBDD()
         {
-            this.ChaineConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\MasterChef.mdf;Integrated Security=True;Connect Timeout=30";
+            this.ChaineConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\MaterChef.mdf;Integrated Security=True;Connect Timeout=30";
             this.Connex = new SqlConnection(this.ChaineConnection);
             this.Command = new SqlCommand("", this.Connex);
             this.Adapter = new SqlDataAdapter("",this.Connex);

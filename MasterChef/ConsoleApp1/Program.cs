@@ -26,15 +26,13 @@ namespace ConsoleApp1
 
              try
              {
-                 bdd.GetRows("SELECT * FROM INGREDIENT", "INGREDIENT");
+                 
                  Console.WriteLine("Query ok");
-                 foreach(DataRow dataRow in bdd.DataSet.Tables[0].Rows)
+                 foreach(DataRow dataRow in cuisineController.SelectIngredientInZone(1).Tables[0].Rows)
                  {
-                     Console.WriteLine(dataRow["Id"]);
-                     Console.WriteLine(dataRow["Nom"]);
+                  
+                     Console.WriteLine(dataRow["Nom"] +"--"+dataRow["Id"]);
                  }
-
-                 cuisineController.InsertIngredient("Poireau", 10, 2); 
 
              }
              catch (Exception e)

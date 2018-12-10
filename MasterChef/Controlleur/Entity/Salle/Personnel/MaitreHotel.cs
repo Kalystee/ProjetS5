@@ -34,12 +34,7 @@ namespace Controlleur.Entity.Salle.Personnels
         /// </summary>
         public void CreerCommander()
         {
-            Table table = new Table();
-
-            if (table.EstDisponible == true)
-            {
-                Commande commande = new Commande(new Table(), new Plat());
-            }
+           
 
         }
     }

@@ -17,12 +17,18 @@ namespace Controlleur.Entity.Cuisine.Plats
 
         public string GetIngredientsOfZone()
         {
+            
             return "SELECT * FROM INGREDIENT WHERE Id_ZONE_STOCKAGE IN (SELECT Id FROM ZONE_STOCKAGE WHERE Id =" + this.Id+";";
+        }
+
+        public string GetZone()
+        {
+            return "SELECT * FROM ZONE_STOCKAGE WHERE Id=" + this.Id ;
         }
 
         /*public string AddIngredientsInZ()
         {
-            return "INSERT INTO INGREDIENT (Nom,QuantiteMax) VALUES();";
+            return "INSERT INTO INGREDIENT (Nom,Quantite) VALUES();";
         }*/
         
         public void AddIngredient(Ingredient i)

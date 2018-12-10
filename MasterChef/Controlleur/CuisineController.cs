@@ -25,11 +25,11 @@ namespace Controlleur
             this.Ing = new Ingredient();
         }
 
-        public DataSet SelectIngredientInZone()
+        public DataSet SelectIngredientInZone(int idZone)
         {
             this.Dataset.Tables.Clear();
-
-            this.Dataset = this.Connex.GetRows(this.Zone.GetIngredientsOfZone(), "ZONE_STOCKAGE");
+            this.Zone.Id = idZone;
+            this.Dataset = this.Connex.GetRows(this.Zone.GetIngredientsOfZone(), "INGREDIENT");
             return this.Dataset;
         }
 
