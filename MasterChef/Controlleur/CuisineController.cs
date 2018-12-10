@@ -14,8 +14,10 @@ namespace Controlleur
     {
         public CnxBDD Connex { get; }
         public ZoneConserv Zone { get; set; }
+        public Plat Plat { get; set; }
         public Ingredient Ing { get; set; }
         public DataSet Dataset { get; set; }
+
 
         public CuisineController()
         {
@@ -23,14 +25,14 @@ namespace Controlleur
             this.Zone = new ZoneConserv();
             this.Dataset = new DataSet();
             this.Ing = new Ingredient();
+            this.Plat = new Plat();
         }
 
         public DataSet SelectIngredientInZone(int idZone)
         {
             this.Dataset.Tables.Clear();
             this.Zone.Id = idZone;
-            this.Dataset = this.Connex.GetRows(this.Zone.GetIngredientsOfZone(), "INGREDIENT");
-            return this.Dataset;
+            return this.Connex.GetRows(this.Zone.GetIngredientsOfZone(), "INGREDIENT");
         }
 
         public void InsertIngredient(string nom, int quantite, int zone)
@@ -40,6 +42,13 @@ namespace Controlleur
             this.Ing.Quantite = quantite;
             this.Ing.Id_Zone = zone;
            this.Connex.ActionRow(this.Ing.InsertIngredient());
+        }
+
+        public DataSet SelectIngredientOfPlat(int idPlat)
+        {
+            this.Dataset.Tables.Clear();
+            this.Plat.Id = idPlat;
+            return this.Connex.GetRows(this.Plat.GetIngredients(),"INGREDIENT");
         }
 
     }

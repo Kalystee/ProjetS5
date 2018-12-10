@@ -22,13 +22,13 @@ namespace ConsoleApp1
         {
 
             CnxBDD bdd = new CnxBDD();
-             CuisineController cuisineController = new CuisineController();
+            CuisineController cuisineController = new CuisineController();
 
              try
              {
-                 
+               // bdd.GetRows("SELECT * FROM INGREDIENT WHERE Id IN (SELECT Id_INGREDIENT FROM composer WHERE Id=3)", "INGREDIENT");
                  Console.WriteLine("Query ok");
-                 foreach(DataRow dataRow in cuisineController.SelectIngredientInZone(1).Tables[0].Rows)
+                 foreach(DataRow dataRow in cuisineController.SelectIngredientInZone(2).Tables[0].Rows)
                  {
                   
                      Console.WriteLine(dataRow["Nom"] +"--"+dataRow["Id"]);

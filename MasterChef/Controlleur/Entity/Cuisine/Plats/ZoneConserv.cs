@@ -17,8 +17,7 @@ namespace Controlleur.Entity.Cuisine.Plats
 
         public string GetIngredientsOfZone()
         {
-            
-            return "SELECT * FROM INGREDIENT WHERE Id_ZONE_STOCKAGE IN (SELECT Id FROM ZONE_STOCKAGE WHERE Id =" + this.Id+";";
+            return "SELECT * FROM INGREDIENT WHERE Id_ZONE_STOCKAGE IN (SELECT Id FROM ZONE_STOCKAGE WHERE Id =" + this.Id+");";
         }
 
         public string GetZone()
