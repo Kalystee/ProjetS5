@@ -9,7 +9,7 @@ namespace Controlleur.Entity.Salle.Disposition
     public class Rang
     {
         private int id;
-        private List<Table> tables;
+        public List<Table> Tables { get; }
 
         /// <summary>
         /// Constructor of a Rang
@@ -18,10 +18,10 @@ namespace Controlleur.Entity.Salle.Disposition
         public Rang(int _id)
         {
             this.id = _id;
-            this.tables = new List<Table>();
+            this.Tables = new List<Table>();
             for(int i = 0; i < 2; i++)
             {
-                this.tables.Add(new Table(i,4));
+                this.Tables.Add(new Table(i,4));
             }
         }
     }

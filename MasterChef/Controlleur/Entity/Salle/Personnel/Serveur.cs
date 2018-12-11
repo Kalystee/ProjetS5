@@ -15,7 +15,7 @@ namespace Controlleur.Entity.Salle.Personnels
         public Table tableCible;
 
 
-        public Serveur(int id) : base(id)
+        public Serveur(string name) : base(name)
         {
        
         }

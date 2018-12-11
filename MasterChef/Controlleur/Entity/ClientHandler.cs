@@ -1,4 +1,6 @@
 ﻿using Controlleur.Entity.Clients;
+using Controlleur.Entity.Salle.Personnels;
+using Controlleur.Entity.Salle;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Controlleur.Entity
 {
-    class ClientHandler : IObservable<Client>
+    public class ClientHandler : IObservable<Client>
     {
         private List<IObserver<Client>> observers; //people who will get informations
         private List<Client> name;
@@ -18,14 +20,13 @@ namespace Controlleur.Entity
             name = new List<Client>();
         }
 
-
         /// <summary>
         /// methode to check if observer is already registered. If not, add it
         /// provide observe with existing data
         /// </summary>
         /// <param name="observer"></param>
         /// <returns></returns>
-        public IDisposable Subscribe(IObservable<Client> observer)
+        public IDisposable Subscribe(IObserver<Client> observer)
         {
             if (!observers.Contains(observer))
             {
@@ -37,19 +38,13 @@ namespace Controlleur.Entity
         }
 
         /// <summary>
-        /// Called to indicate all baggage is now unloaded
+        /// It permits to know if client is taken or not by MaitreHotel
         /// </summary>
-        /// <param name="_name"></param>
-        public void ClientStatus(string _name)
+        /// <param name="Name"></param>
+        /// <param name="_nbPers"></param>
+        public void ClientStatus(string Name, int _nbPers)
         {
-            ClientStatus(_name,String.Empty,0);
-        }
-
-
-
-        public void ClientSatus(string _name, int _nbPers)
-        {
-            var client = new Client(_name,_nbPers);
+            var client = new Client(Name, _nbPers);
             //_nbPers is assigned, so add new client object to list
             if (_nbPers > 0 && !name.Contains(client))
             {
@@ -58,10 +53,14 @@ namespace Controlleur.Entity
                     observer.OnNext(client);
             }
 
-            else if (_nbPers == 0)
+           /* else if (_nbPers == 0)
             {
-            
-            }
+                var clientsToRemove = new List<Client>();
+                foreach (Client c in this.name)
+                {
+
+                }
+            }*/
         }
     }
 }

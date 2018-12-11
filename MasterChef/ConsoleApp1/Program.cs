@@ -13,6 +13,9 @@ using Controlleur;
 using System.Net.Sockets;
 using System.Net;
 using System.Threading;
+using Controlleur.Entity.Salle.Disposition.Personnels;
+using Controlleur.Entity.Clients;
+using Controlleur.Entity;
 
 namespace ConsoleApp1
 {
@@ -21,32 +24,44 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            CnxBDD bdd = new CnxBDD();
-            CuisineController cuisineController = new CuisineController();
+            /* CnxBDD bdd = new CnxBDD();
+             CuisineController cuisineController = new CuisineController();
 
-             try
-             {
-               // bdd.GetRows("SELECT * FROM INGREDIENT WHERE Id IN (SELECT Id_INGREDIENT FROM composer WHERE Id=3)", "INGREDIENT");
-                 Console.WriteLine("Query ok");
-                 foreach(DataRow dataRow in cuisineController.SelectIngredientInZone(2).Tables[0].Rows)
-                 {
-                  
-                     Console.WriteLine(dataRow["Nom"] +"--"+dataRow["Id"]);
-                 }
+              try
+              {
+                // bdd.GetRows("SELECT * FROM INGREDIENT WHERE Id IN (SELECT Id_INGREDIENT FROM composer WHERE Id=3)", "INGREDIENT");
+                  Console.WriteLine("Query ok");
+                  foreach(DataRow dataRow in cuisineController.SelectIngredientInZone(2).Tables[0].Rows)
+                  {
 
-             }
-             catch (Exception e)
-             {
-                 Console.WriteLine(e.StackTrace);
-             }
-             finally
-             {
+                      Console.WriteLine(dataRow["Nom"] +"--"+dataRow["Id"]);
+                  }
 
-                 Console.Read();
+              }
+              catch (Exception e)
+              {
+                  Console.WriteLine(e.StackTrace);
+              }
+              finally
+              {
 
-             }
+                  Console.Read();
+
+              }
+
+             */
+
+            MaitreHotel mh =  MaitreHotel.GetInstance();
+            ClientHandler ch = new ClientHandler();
+            Client client = new Client("Charles", 1);
+
+            mh.Subscribe(ch);
+            ch.ClientStatus(client.Name,client.NbPers);
+            Console.Read();
+
              
-            
+
+
         }
 
 

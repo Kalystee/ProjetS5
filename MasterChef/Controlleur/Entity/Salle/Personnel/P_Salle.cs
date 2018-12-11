@@ -8,22 +8,22 @@ namespace Controlleur.Entity.Salle.Personnels
 {
     public abstract class P_Salle
     {
-        protected int id;
-        public int Id
+        protected string name;
+        public string Name
         {
             get
             {
-                return this.id;  
+                return this.name;  
             }
 
             set
             {
-                this.id=value;
+                this.name=value;
             }
         }
         
 
-        public P_Salle(int id)
+        public P_Salle(string name)
         {
          
         }

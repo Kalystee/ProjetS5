@@ -10,7 +10,7 @@ namespace Controlleur.Entity.Salle.Disposition
     public class Carre
     {
         private int id;
-        private List<Rang> rangs;
+        public List<Rang> Rangs { get;}
         private ChefRang chefRang;
         private Serveur serveur;
 
@@ -21,12 +21,12 @@ namespace Controlleur.Entity.Salle.Disposition
         public Carre(int _id)
         {
             this.id = _id;
-            this.rangs = new List<Rang>();
-            this.chefRang = new ChefRang(11);
-            this.serveur = new Serveur(12);
+            this.Rangs = new List<Rang>();
+            this.chefRang = new ChefRang("ChefRang");
+            this.serveur = new Serveur("Serveur");
 
             for (int i = 0; i < 2; i++){
-                this.rangs.Add(new Rang(i));
+                this.Rangs.Add(new Rang(i));
             }
         }
     }
