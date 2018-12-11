@@ -7,25 +7,22 @@ using Controlleur.Entity.Cuisine.Plats;
 
 namespace Controlleur.Entity.Cuisine.Personnel
 {
-    public class Cuisinier
+    public class Cuisinier : PersonnelCuisine
     {
         public PlatBuilder Builder { get; set; }
 
-        public Plat PlatAPréparer { get; set; }
-
-        public void preparerPlat(Plat p)
+        public Cuisinier(int id) : base(id)
         {
-            throw new NotImplementedException();
+            this.Builder = new PlatBuilder();
         }
 
-        public void allerCuire()
+        public Plat preparerPlat(Plat p)
         {
-            throw new NotImplementedException();
-        }
-
-        public void préparerAccompagnement(Ingredient i)
-        {
-            throw new NotImplementedException();
+            this.Builder.PréparerPlat(p);
+            this.Builder.PréparerAccompagnement();
+            this.Builder.Result.EstPret = true;
+            return this.Builder.GetResult();
+            
         }
     }
 }
