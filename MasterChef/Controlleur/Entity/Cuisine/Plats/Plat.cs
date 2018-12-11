@@ -22,6 +22,12 @@ namespace Controlleur.Entity.Cuisine.Plats
 
         }
 
+
+        public string GetPlatFromId(int idPlat)
+        {
+            return "SELECT * FROM RECETTE WHERE Id=" + idPlat;
+        }
+
         /// <summary>
         /// Query to get all the ingredients of the dish
         /// </summary>
@@ -38,12 +44,8 @@ namespace Controlleur.Entity.Cuisine.Plats
         public string UseIngredients(int idIng)
         {
             return "UPDATE INGREDIENT " +
-                "SET Quantite = Quantite - (SELECT Quantite_INGREDIENT FROM composer WHERE Id_INGREDIENT = "+idIng+" AND Id="+this.Id+")"+
-                "WHERE Id IN (SELECT Id_INGREDIENT FROM composer WHERE Id=" + this.Id + ");";
+                "SET Quantite = Quantite - (SELECT Quantite_INGREDIENT FROM composer WHERE Id_INGREDIENT = " + idIng + " AND Id=" + this.Id + ")" +
+                "WHERE Id = " + idIng + ";";
         }
-
-        
-
-        
     }
 }

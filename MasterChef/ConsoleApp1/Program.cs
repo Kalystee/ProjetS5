@@ -29,15 +29,10 @@ namespace ConsoleApp1
              {
                 Plat plat = new Plat();
                 plat.Id = 1;
+                Table table = new Table(1, 4);
+                Commande commande = new Commande(table,null);
+                commande.Plat = cuisineController.Cuisinier.preparerPlat(plat);
 
-               cuisineController.PréparerPlat(plat.Id);
-
-
-                 foreach(DataRow dataRow in cuisineController.SelectIngredientOfPlat(plat.Id).Tables[0].Rows)
-                 {
-                  
-                     Console.WriteLine(dataRow["Nom"] +"--" + dataRow["Quantite"]);
-                 }
 
              }
              catch (Exception e)
@@ -46,7 +41,6 @@ namespace ConsoleApp1
              }
              finally
              {
-
                  Console.Read();
              }
         }

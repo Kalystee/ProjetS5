@@ -7,6 +7,7 @@ using System.Data;
 
 using Modele;
 using Controlleur.Entity.Cuisine.Plats;
+using Controlleur.Entity.Cuisine.Personnel;
 
 namespace Controlleur
 {
@@ -17,6 +18,7 @@ namespace Controlleur
         public Plat Plat { get; set; }
         public Ingredient Ing { get; set; }
         public DataSet Dataset { get; set; }
+        public Cuisinier Cuisinier { get; set; }
 
 
         public CuisineController()
@@ -26,6 +28,7 @@ namespace Controlleur
             this.Dataset = new DataSet();
             this.Ing = new Ingredient();
             this.Plat = new Plat();
+            this.Cuisinier = new Cuisinier(100);
         }
 
         public DataSet SelectIngredientInZone(int idZone)
