@@ -51,5 +51,17 @@ namespace Controlleur
             return this.Connex.GetRows(this.Plat.GetIngredients(),"INGREDIENT");
         }
 
+        public void PréparerPlat(int idPlat)
+        {
+            this.Plat.Id = idPlat;
+            this.Dataset = this.Connex.GetRows(this.Plat.GetIngredients(), "INGREDIENT");
+            foreach(DataRow dataR in this.Dataset.Tables[0].Rows)
+            {
+                this.Connex.ActionRow(this.Plat.UseIngredients((int)dataR["Id"]));
+            }
+            Console.WriteLine("fin préparation");
+            
+        }
+
     }
 }

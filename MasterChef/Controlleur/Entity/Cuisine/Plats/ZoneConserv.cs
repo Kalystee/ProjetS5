@@ -30,10 +30,10 @@ namespace Controlleur.Entity.Cuisine.Plats
             return "INSERT INTO INGREDIENT (Nom,Quantite) VALUES();";
         }*/
         
-        public void AddIngredient(Ingredient i)
+       /* public string AddIngredient(Ingredient i)
         {
             
-        }
+        }*/
 
         
 

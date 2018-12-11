@@ -23,15 +23,20 @@ namespace ConsoleApp1
 
             CnxBDD bdd = new CnxBDD();
             CuisineController cuisineController = new CuisineController();
+            
 
              try
              {
-               // bdd.GetRows("SELECT * FROM INGREDIENT WHERE Id IN (SELECT Id_INGREDIENT FROM composer WHERE Id=3)", "INGREDIENT");
-                 Console.WriteLine("Query ok");
-                 foreach(DataRow dataRow in cuisineController.SelectIngredientInZone(2).Tables[0].Rows)
+                Plat plat = new Plat();
+                plat.Id = 1;
+
+               cuisineController.PréparerPlat(plat.Id);
+
+
+                 foreach(DataRow dataRow in cuisineController.SelectIngredientOfPlat(plat.Id).Tables[0].Rows)
                  {
                   
-                     Console.WriteLine(dataRow["Nom"] +"--"+dataRow["Id"]);
+                     Console.WriteLine(dataRow["Nom"] +"--" + dataRow["Quantite"]);
                  }
 
              }
@@ -43,10 +48,7 @@ namespace ConsoleApp1
              {
 
                  Console.Read();
-
              }
-             
-            
         }
 
 

@@ -22,7 +22,11 @@ namespace Controlleur.Entity.Cuisine.Plats
 
         public void PréparerPlat(Plat plat)
         {
-            plat.UseIngredients();
+            foreach(Ingredient i in plat.ListeIngredients.Values)
+            {
+                plat.UseIngredients(i.Id);
+            }
+            
 
             //Patienter le temps de préparation
             Thread.Sleep(plat.TpsPrepa*1000);
