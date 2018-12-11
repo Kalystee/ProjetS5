@@ -57,10 +57,9 @@ namespace ConsoleApp1
             ClientHandler ch = new ClientHandler();
             Client client = new Client("Charles", 1);
 
-            mh.Subscribe(ch);
-          
-            ch.ClientStatus(client.Name,client.NbPers);
-            salle.AssignerTable(client);
+            mh.Subscribe(ch); //add mh to the liste of observer
+            ch.ClientStatus(client.Name,client.NbPers); //add Client to the list of client (observable)
+            salle.AssignerTable(client); //Give an available table to client
             Console.Read();
 
              
