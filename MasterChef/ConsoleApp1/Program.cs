@@ -51,12 +51,16 @@ namespace ConsoleApp1
 
              */
 
+            Salle salle = new Salle(1);
+            
             MaitreHotel mh =  MaitreHotel.GetInstance();
             ClientHandler ch = new ClientHandler();
             Client client = new Client("Charles", 1);
 
             mh.Subscribe(ch);
+          
             ch.ClientStatus(client.Name,client.NbPers);
+            salle.AssignerTable(client);
             Console.Read();
 
              

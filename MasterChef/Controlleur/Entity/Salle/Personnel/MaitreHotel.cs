@@ -81,6 +81,7 @@ namespace Controlleur.Entity.Salle.Disposition.Personnels
                 Console.WriteLine("A table for :");
                 Console.WriteLine(info.NbPers);
                 Console.WriteLine();
+
             }
         }
 

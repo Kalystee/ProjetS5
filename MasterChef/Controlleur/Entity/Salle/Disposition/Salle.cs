@@ -45,11 +45,15 @@ namespace Controlleur.Entity.Salle.Disposition
                 {
                     foreach(Table tables in rang.Tables)
                     {
-                        if (client.NbPers >= tables.NbPlace && tables.EstDisponible())
+                        if (client.NbPers <= tables.NbPlace && tables.EstDisponible())
                         {
                             tables.Client = client;
-                        } 
+                            Console.WriteLine("La table : " + tables.Id + " - " + tables.NbPlace+" client : "+ tables.Client.Name);
+                            return;
+                        }
+                       
                     }
+                    
                 }
 
 
