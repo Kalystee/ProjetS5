@@ -25,7 +25,7 @@ namespace ConsoleApp1
         {
             CnxBDD bdd = new CnxBDD();
             CuisineController cuisineController = new CuisineController();
-            
+            /*
 
              try
              {
@@ -44,7 +44,7 @@ namespace ConsoleApp1
              finally
              {
                  Console.Read();
-             }
+             }*/
 
             Salle salle = new Salle(1);
             
@@ -55,6 +55,9 @@ namespace ConsoleApp1
             mh.Subscribe(ch); //add mh to the liste of observer
             ch.ClientStatus(client.Name,client.NbPers); //add Client to the list of client (observable)
             salle.AssignerTable(client); //Give an available table to client
+            Plat p = client.CommanderPlat();
+            Console.WriteLine("I would like to eat and order this disch number : "+p.Id);
+
             Console.Read();
         }
     }

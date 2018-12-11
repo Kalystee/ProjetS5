@@ -14,6 +14,7 @@ namespace Controlleur.Entity.Salle.Personnels
         public Commande Commande { get; set; }
         private List<string> nameInfos = new List<string>();
         private IDisposable cancellation;
+        public Table TableOccupe { get; set; }
 
         /// <summary>
         /// Constructor get this observer
@@ -51,7 +52,7 @@ namespace Controlleur.Entity.Salle.Personnels
             nameInfos.Clear();
         }
 
-        public void OnNext(Client value)
+        public void OnNext(Client client)
         {
             //prendre une commande
             //info : client + table = commande

@@ -47,6 +47,7 @@
     <Compile Include="Entity\Clients\Cool.cs" />
     <Compile Include="Entity\Clients\Normal.cs" />
     <Compile Include="Entity\Clients\Presse.cs" />
+    <Compile Include="Entity\Clients\ReceptionPlatClient.cs" />
     <Compile Include="Entity\Cuisine\Cuisine.cs" />
     <Compile Include="Entity\Cuisine\Machines\Evier.cs" />
     <Compile Include="Entity\Cuisine\Machines\LaveVaisselle.cs" />

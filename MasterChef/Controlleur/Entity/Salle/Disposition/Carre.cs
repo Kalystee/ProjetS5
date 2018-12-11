@@ -11,7 +11,7 @@ namespace Controlleur.Entity.Salle.Disposition
     {
         private int id;
         public List<Rang> Rangs { get;}
-        private ChefRang chefRang;
+        public ChefRang ChefRang { get; }
         private Serveur serveur;
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace Controlleur.Entity.Salle.Disposition
         {
             this.id = _id;
             this.Rangs = new List<Rang>();
-            this.chefRang = new ChefRang("ChefRang");
+            this.ChefRang = new ChefRang("ChefRang");
             this.serveur = new Serveur("Serveur");
 
             for (int i = 0; i < 2; i++){

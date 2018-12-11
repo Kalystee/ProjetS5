@@ -35,6 +35,7 @@ namespace Controlleur.Entity.Salle.Disposition
 
         /// <summary>
         /// Listing of tables to get one table for Client
+        /// and assigned a chefrang to the table
         /// </summary>
         /// <param name="client"></param>
         public void AssignerTable(Client client)
@@ -48,8 +49,15 @@ namespace Controlleur.Entity.Salle.Disposition
                         if (client.NbPers <= tables.NbPlace && tables.EstDisponible())
                         {
                             tables.Client = client;
-                            Console.WriteLine("La table : " + tables.Id + " - " + tables.NbPlace+" client : "+ tables.Client.Name);
+                            Console.WriteLine("The table number : " + tables.Id + " - For client : "+ tables.Client.Name);
+                            if (carre.ChefRang.TableOccupe == null)
+                            {
+                                carre.ChefRang.TableOccupe = tables;
+                                Console.WriteLine("Hello " + client.Name + " I am " + carre.ChefRang.Name);
+                                Console.WriteLine(" Do you want to have a drink or to eat ?");
+                            }
                             return;
+
                         }
                        
                     }

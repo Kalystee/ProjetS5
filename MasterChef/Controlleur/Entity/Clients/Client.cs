@@ -15,6 +15,7 @@ namespace Controlleur.Entity.Clients
     {
         public string Name { get; }
         public int NbPers { get; }
+        public Plat Plat { get; }
         public Commande Commande { get; set; }
         public IBehaviour Behaviour { get; set; }
 
@@ -33,18 +34,15 @@ namespace Controlleur.Entity.Clients
         }
 
         
-
-
-
-
-
         /// <summary>
         /// A client can choose dishes of the restaurant menu
         /// </summary>
         /// <returns></returns>
-        public List<Plat> CommanderPlat()
+        public Plat CommanderPlat()
         {
-            return null;
+            Plat commandePlat = new Plat();
+            commandePlat.Id = 2;
+            return commandePlat;
         }
     }  
 }

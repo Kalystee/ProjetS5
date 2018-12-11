@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controlleur.Entity.Cuisine.Plats;
 
 namespace Controlleur.Entity
 {
@@ -52,15 +53,6 @@ namespace Controlleur.Entity
                 foreach (var observer in observers)
                     observer.OnNext(client);
             }
-
-           /* else if (_nbPers == 0)
-            {
-                var clientsToRemove = new List<Client>();
-                foreach (Client c in this.name)
-                {
-
-                }
-            }*/
         }
     }
 }
