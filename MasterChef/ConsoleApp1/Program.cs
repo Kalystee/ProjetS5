@@ -13,6 +13,9 @@ using Controlleur;
 using System.Net.Sockets;
 using System.Net;
 using System.Threading;
+using Controlleur.Entity.Salle.Disposition.Personnels;
+using Controlleur.Entity.Clients;
+using Controlleur.Entity;
 
 namespace ConsoleApp1
 {
@@ -20,7 +23,6 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
             CnxBDD bdd = new CnxBDD();
             CuisineController cuisineController = new CuisineController();
             
@@ -43,6 +45,18 @@ namespace ConsoleApp1
              {
                  Console.Read();
              }
+
+            Salle salle = new Salle(1);
+            
+            MaitreHotel mh =  MaitreHotel.GetInstance();
+            ClientHandler ch = new ClientHandler();
+            Client client = new Client("Charles", 1);
+
+            mh.Subscribe(ch);
+          
+            ch.ClientStatus(client.Name,client.NbPers);
+            salle.AssignerTable(client);
+            Console.Read();
         }
     }
 }

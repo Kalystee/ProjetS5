@@ -14,7 +14,7 @@ namespace Controlleur.Entity.Clients
     public class Client
     {
         public string Name { get; }
-        public int nbPers { get; }
+        public int NbPers { get; }
         public Commande Commande { get; set; }
         public IBehaviour Behaviour { get; set; }
 
@@ -27,7 +27,7 @@ namespace Controlleur.Entity.Clients
         public Client(string _name, int _nbPers)
         {
             this.Name = _name;
-            this.nbPers = _nbPers;
+            this.NbPers = _nbPers;
 
             
         }

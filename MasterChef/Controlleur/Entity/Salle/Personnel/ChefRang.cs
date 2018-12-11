@@ -13,7 +13,7 @@ namespace Controlleur.Entity.Salle.Personnels
         public Commande Commande { get; set; }
         
 
-        public ChefRang(int id) : base(id)
+        public ChefRang(string name) : base(name)
         {
          
         }

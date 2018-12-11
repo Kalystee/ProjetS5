@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controlleur.Entity.Clients;
 using Controlleur.Entity.Salle.Disposition.Personnels;
 using Controlleur.Entity.Salle.Personnels;
 
@@ -28,6 +29,36 @@ namespace Controlleur.Entity.Salle.Disposition
                 this.carres.Add(new Carre(i));
             }
             
+            
+        }
+
+
+        /// <summary>
+        /// Listing of tables to get one table for Client
+        /// </summary>
+        /// <param name="client"></param>
+        public void AssignerTable(Client client)
+        {
+            foreach (Carre carre in this.carres)
+            {
+                foreach (Rang rang in carre.Rangs)
+                {
+                    foreach(Table tables in rang.Tables)
+                    {
+                        if (client.NbPers <= tables.NbPlace && tables.EstDisponible())
+                        {
+                            tables.Client = client;
+                            Console.WriteLine("La table : " + tables.Id + " - " + tables.NbPlace+" client : "+ tables.Client.Name);
+                            return;
+                        }
+                       
+                    }
+                    
+                }
+
+
+            }
+
             
         }
     }
