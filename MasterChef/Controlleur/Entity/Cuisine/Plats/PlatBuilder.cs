@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Controlleur.Entity.Interface;
+using Modele;
 
 namespace Controlleur.Entity.Cuisine.Plats
 {
@@ -17,16 +19,25 @@ namespace Controlleur.Entity.Cuisine.Plats
 
         public void CuirPlat()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Cuisson...");
         }
 
         public void PréparerPlat(Plat plat)
         {
-            plat.UseIngredients();
+            this.Result = plat;
+            DataSet data = new DataSet();
+            CnxBDD bdd = new CnxBDD();
+            data = bdd.GetRows(this.Result.GetIngredients(), "INGREDIENT");
+            foreach (DataRow dataR in data.Tables[0].Rows)
+            {
+                bdd.ActionRow(this.Result.UseIngredients((int)dataR["Id"]));
+            }
+            Console.WriteLine("FIN PREPARATION");
 
+            Console.WriteLine("Debut Attente");
             //Patienter le temps de préparation
             Thread.Sleep(plat.TpsPrepa*1000);
-
+            Console.WriteLine("fin Attente");
             if (plat.TpsCuisson > 0)
             {
                 CuirPlat();

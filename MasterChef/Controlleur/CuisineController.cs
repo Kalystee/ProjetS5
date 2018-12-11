@@ -7,6 +7,7 @@ using System.Data;
 
 using Modele;
 using Controlleur.Entity.Cuisine.Plats;
+using Controlleur.Entity.Cuisine.Personnel;
 
 namespace Controlleur
 {
@@ -17,6 +18,7 @@ namespace Controlleur
         public Plat Plat { get; set; }
         public Ingredient Ing { get; set; }
         public DataSet Dataset { get; set; }
+        public Cuisinier Cuisinier { get; set; }
 
 
         public CuisineController()
@@ -26,6 +28,7 @@ namespace Controlleur
             this.Dataset = new DataSet();
             this.Ing = new Ingredient();
             this.Plat = new Plat();
+            this.Cuisinier = new Cuisinier(100);
         }
 
         public DataSet SelectIngredientInZone(int idZone)
@@ -49,6 +52,18 @@ namespace Controlleur
             this.Dataset.Tables.Clear();
             this.Plat.Id = idPlat;
             return this.Connex.GetRows(this.Plat.GetIngredients(),"INGREDIENT");
+        }
+
+        public void PréparerPlat(int idPlat)
+        {
+            this.Plat.Id = idPlat;
+            this.Dataset = this.Connex.GetRows(this.Plat.GetIngredients(), "INGREDIENT");
+            foreach(DataRow dataR in this.Dataset.Tables[0].Rows)
+            {
+                this.Connex.ActionRow(this.Plat.UseIngredients((int)dataR["Id"]));
+            }
+            Console.WriteLine("fin préparation");
+            
         }
 
     }

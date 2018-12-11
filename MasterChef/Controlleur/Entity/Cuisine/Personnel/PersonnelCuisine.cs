@@ -12,7 +12,7 @@ namespace Controlleur.Entity.Cuisine.Personnel
 
         public PersonnelCuisine(int id)
         {
-
+            this.Id = id;
         }
     }
 }

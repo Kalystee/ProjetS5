@@ -14,11 +14,11 @@ namespace Controlleur.Entity
         private List<IObserver<Client>> observers; //people who will get informations
         private List<Client> name;
 
-        public ClientHandler()
-        {
-            observers = new List<IObserver<Client>>();
-            name = new List<Client>();
-        }
+         public ClientHandler()
+         {
+             observers = new List<IObserver<Client>>();
+             name = new List<Client>();
+         }
 
         /// <summary>
         /// methode to check if observer is already registered. If not, add it
