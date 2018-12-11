@@ -42,12 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CuisineController.cs" />
+    <Compile Include="Entity\ClientHandler.cs" />
     <Compile Include="Entity\Clients\Client.cs" />
     <Compile Include="Entity\Clients\Cool.cs" />
     <Compile Include="Entity\Clients\Normal.cs" />
     <Compile Include="Entity\Clients\Presse.cs" />
     <Compile Include="Entity\Cuisine\Cuisine.cs" />
+    <Compile Include="Entity\Cuisine\Machines\Evier.cs" />
+    <Compile Include="Entity\Cuisine\Machines\LaveVaisselle.cs" />
     <Compile Include="Entity\Cuisine\Machines\Machine.cs" />
+    <Compile Include="Entity\Cuisine\Machines\MachineaLaver.cs" />
     <Compile Include="Entity\Cuisine\Machines\MachineCuisson.cs" />
     <Compile Include="Entity\Cuisine\Personnel\Chef.cs" />
     <Compile Include="Entity\Cuisine\Personnel\CommisCuisine.cs" />
@@ -83,9 +87,8 @@
     <Compile Include="Entity\Salle\Disposition\Table.cs" />
     <Compile Include="Entity\Salle\MatosSalle\Bouteille.cs" />
     <Compile Include="Entity\Salle\MatosSalle\Corbeille.cs" />
-    <Compile Include="Entity\Salle\MatosSalle\MastosSalle.cs" />
+    <Compile Include="Entity\Salle\MatosSalle\MatosSalle.cs" />
     <Compile Include="Entity\Salle\Personnel\ChefRang.cs" />
-    <Compile Include="Entity\Salle\Personnel\Commis_S.cs" />
     <Compile Include="Entity\Salle\Personnel\MaitreHotel.cs" />
     <Compile Include="Entity\Salle\Personnel\P_Salle.cs" />
     <Compile Include="Entity\Salle\Personnel\Serveur.cs" />

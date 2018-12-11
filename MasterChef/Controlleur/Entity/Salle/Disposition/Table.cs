@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Controlleur.Entity.Clients;
+using Controlleur.Entity.Salle.MatosSalle;
 
 namespace Controlleur.Entity.Salle.Disposition
 {
@@ -12,6 +13,7 @@ namespace Controlleur.Entity.Salle.Disposition
         public int Id {get;}
         public int NbPlace { get;}
         public  Client Client { get; set; }
+        public MatosSalle.MatosSalle MatosSalle { get; set; }
 
 
         /// <summary>
@@ -32,8 +34,7 @@ namespace Controlleur.Entity.Salle.Disposition
         /// <returns>true if the table is available</returns>
         public bool EstDisponible()
         {
-            return this.Client != null;
+            return this.Client == null;
         }
-
     }
 }
