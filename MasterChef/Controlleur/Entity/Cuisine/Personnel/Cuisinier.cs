@@ -20,6 +20,7 @@ namespace Controlleur.Entity.Cuisine.Personnel
         {
             this.Builder.PréparerPlat(p);
             this.Builder.PréparerAccompagnement();
+            this.Builder.Result.EstPret = true;
             return this.Builder.GetResult();
             
         }
