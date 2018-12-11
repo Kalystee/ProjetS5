@@ -39,9 +39,7 @@ namespace Controlleur.Entity.Salle.Disposition.Personnels
         /// </summary>
         public void IAssignerTable()
         {
-            Client
-            for ()
-
+        
         }
 
         public void OnNext(Client value)
