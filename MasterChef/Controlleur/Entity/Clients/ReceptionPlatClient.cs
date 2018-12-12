@@ -20,8 +20,8 @@ namespace Controlleur.Entity.Clients
                 // Establish the remote endpoint for the socket.  
                 // This example uses port 11000 on the local computer.  
                 IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
-                IPAddress ipAddress = IPAddress.Parse("192.168.0.5");
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 8651);
+                IPAddress ipAddress = IPAddress.Parse("192.168.5.5");
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 4444);
 
                 // Create a TCP/IP  socket.  
                 Socket sender = new Socket(ipAddress.AddressFamily,

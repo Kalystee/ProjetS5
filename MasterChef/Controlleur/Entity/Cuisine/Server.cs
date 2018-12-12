@@ -18,7 +18,7 @@ namespace Controlleur.Entity.Cuisine
             // Dns.GetHostName returns the name of the   
             // host running the application.  
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress ipAddress = IPAddress.Parse("192.168.0.7");
+            IPAddress ipAddress = IPAddress.Parse("192.168.5.5");
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 4444);
 
             // Create a TCP/IP socket.  

@@ -24,6 +24,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            /* PREPARATION D'UN PLAT
+            
             CnxBDD bdd = new CnxBDD();
             CuisineController cuisineController = new CuisineController();
             
@@ -55,9 +57,11 @@ namespace ConsoleApp1
              finally
              {
                  Console.Read();
-             }
+             }*/
 
-            /*
+
+
+            /*  TEST SALLE
             Salle salle = new Salle(1);
             
             MaitreHotel mh =  MaitreHotel.GetInstance();
@@ -75,11 +79,9 @@ namespace ConsoleApp1
 
 
 
-
-
-            /*
+            /*   TEST SOCKET
             Server.StartServer();
-
+            
             ReceptionPlatClient.StartClient();
             */
 

@@ -64,6 +64,7 @@
     <Compile Include="Entity\Cuisine\Personnel\Plongeur.cs" />
     <Compile Include="Entity\Cuisine\Plats\TypePlat.cs" />
     <Compile Include="Entity\Cuisine\Plats\ZoneConserv.cs" />
+    <Compile Include="Entity\Cuisine\Server.cs" />
     <Compile Include="Entity\Cuisine\Ustensiles\GrosUstensile.cs" />
     <Compile Include="Entity\Cuisine\Ustensiles\PetitUstensile.cs" />
     <Compile Include="Entity\Cuisine\Ustensiles\Ustensile.cs" />
