@@ -22,7 +22,11 @@ namespace Controlleur.Entity.Cuisine.Plats
 
         }
 
-
+        /// <summary>
+        /// Methof to get the query to get a dish using Id
+        /// </summary>
+        /// <param name="idPlat">Id of the dish</param>
+        /// <returns>Query to get the dish</returns>
         public string GetPlatFromId(int idPlat)
         {
             return "SELECT * FROM RECETTE WHERE Id=" + idPlat;

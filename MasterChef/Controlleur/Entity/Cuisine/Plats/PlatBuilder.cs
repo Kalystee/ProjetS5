@@ -22,6 +22,10 @@ namespace Controlleur.Entity.Cuisine.Plats
             Console.WriteLine("Cuisson...");
         }
 
+        /// <summary>
+        /// Method to préare a dish 
+        /// </summary>
+        /// <param name="plat">Dish to prepare</param>
         public void PréparerPlat(Plat plat)
         {
             this.Result = plat;
@@ -32,21 +36,18 @@ namespace Controlleur.Entity.Cuisine.Plats
             {
                 bdd.ActionRow(this.Result.UseIngredients((int)dataR["Id"]));
             }
-            Console.WriteLine("FIN PREPARATION");
 
-            Console.WriteLine("Debut Attente");
-            //Patienter le temps de préparation
-            Thread.Sleep(plat.TpsPrepa*1000);
-            Console.WriteLine("fin Attente");
+           
             if (plat.TpsCuisson > 0)
             {
                 CuirPlat();
                 //Trouver un four avec de la place, y placer le plat et le mettre en marche pendant le temps demander
             }
-
-
         }
 
+        /// <summary>
+        ///
+        /// </summary>
         public void PréparerAccompagnement()
         {
             if(this.Result.Accompagnement != null)
@@ -55,6 +56,10 @@ namespace Controlleur.Entity.Cuisine.Plats
             }
         }
 
+        /// <summary>
+        /// Method to get the final dish
+        /// </summary>
+        /// <returns></returns>
         public Plat GetResult()
         {
             return this.Result;

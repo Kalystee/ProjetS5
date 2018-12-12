@@ -16,6 +16,7 @@ using System.Threading;
 using Controlleur.Entity.Salle.Disposition.Personnels;
 using Controlleur.Entity.Clients;
 using Controlleur.Entity;
+using Controlleur.Entity.Cuisine;
 
 namespace ConsoleApp1
 {
@@ -25,7 +26,7 @@ namespace ConsoleApp1
         {
             CnxBDD bdd = new CnxBDD();
             CuisineController cuisineController = new CuisineController();
-            /*
+            
 
              try
              {
@@ -34,9 +35,19 @@ namespace ConsoleApp1
                 plat.EstPret = false;
                 Table table = new Table(1, 4);
                 Commande commande = new Commande(table,plat);
-                commande.Plat = cuisineController.Cuisinier.preparerPlat(plat);
 
-             }
+                DataSet d = cuisineController.SelectIngredientOfPlat(commande.Plat.Id);
+                
+                commande.Plat = cuisineController.Cuisinier.preparerPlat(plat);
+                
+
+
+                foreach (DataRow data in cuisineController.SelectIngredientOfPlat(commande.Plat.Id).Tables[0].Rows)
+                {
+                    Console.WriteLine(data["Nom"] + "------" + data["Quantite"]);
+                }
+
+            }
              catch (Exception e)
              {
                  Console.WriteLine(e.StackTrace);
@@ -44,8 +55,9 @@ namespace ConsoleApp1
              finally
              {
                  Console.Read();
-             }*/
+             }
 
+            /*
             Salle salle = new Salle(1);
             
             MaitreHotel mh =  MaitreHotel.GetInstance();
@@ -59,6 +71,19 @@ namespace ConsoleApp1
             Console.WriteLine("I would like to eat and order this disch number : "+p.Id);
 
             Console.Read();
+            */
+
+
+
+
+
+            /*
+            Server.StartServer();
+
+            ReceptionPlatClient.StartClient();
+            */
+
+
         }
     }
 }

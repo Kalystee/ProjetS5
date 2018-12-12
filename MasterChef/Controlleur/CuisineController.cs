@@ -31,6 +31,11 @@ namespace Controlleur
             this.Cuisinier = new Cuisinier(100);
         }
 
+        /// <summary>
+        /// Method to get all the ingredient in a zone
+        /// </summary>
+        /// <param name="idZone">Id of the zone </param>
+        /// <returns></returns>
         public DataSet SelectIngredientInZone(int idZone)
         {
             this.Dataset.Tables.Clear();
@@ -38,6 +43,12 @@ namespace Controlleur
             return this.Connex.GetRows(this.Zone.GetIngredientsOfZone(), "INGREDIENT");
         }
 
+        /// <summary>
+        /// Method to add ingredient in a zone
+        /// </summary>
+        /// <param name="nom">Name of the ingredient</param>
+        /// <param name="quantite">Quantity of the ingredient</param>
+        /// <param name="zone">Id of the zone where the ingredient will be stock</param>
         public void InsertIngredient(string nom, int quantite, int zone)
         {
             this.Dataset.Tables.Clear();
@@ -47,23 +58,16 @@ namespace Controlleur
            this.Connex.ActionRow(this.Ing.InsertIngredient());
         }
 
+        /// <summary>
+        /// Method to get all the ingredient we need to prepare a dish
+        /// </summary>
+        /// <param name="idPlat"></param>
+        /// <returns></returns>
         public DataSet SelectIngredientOfPlat(int idPlat)
         {
             this.Dataset.Tables.Clear();
             this.Plat.Id = idPlat;
             return this.Connex.GetRows(this.Plat.GetIngredients(),"INGREDIENT");
-        }
-
-        public void PréparerPlat(int idPlat)
-        {
-            this.Plat.Id = idPlat;
-            this.Dataset = this.Connex.GetRows(this.Plat.GetIngredients(), "INGREDIENT");
-            foreach(DataRow dataR in this.Dataset.Tables[0].Rows)
-            {
-                this.Connex.ActionRow(this.Plat.UseIngredients((int)dataR["Id"]));
-            }
-            Console.WriteLine("fin préparation");
-            
         }
 
     }
