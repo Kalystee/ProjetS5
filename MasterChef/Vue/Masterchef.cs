@@ -27,7 +27,7 @@ namespace Vue
         {
             string nbr_client;
             nbr_client = comboBox2.Text;
-            int nbr_clientint = Convert.ToInt32(nbr_client.Text);
+           // int nbr_clientint = Convert.ToInt32(nbr_client.Text);
             
 
         }

@@ -24,7 +24,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            CnxBDD bdd = new CnxBDD();
+          /*  CnxBDD bdd = new CnxBDD();
             CuisineController cuisineController = new CuisineController();
             
 
@@ -56,7 +56,7 @@ namespace ConsoleApp1
              {
                  Console.Read();
              }
-
+             */
             /*
             Salle salle = new Salle(1);
             
@@ -77,11 +77,11 @@ namespace ConsoleApp1
 
 
 
-            /*
-            Server.StartServer();
+            
+            //Server.StartServer();
 
             ReceptionPlatClient.StartClient();
-            */
+            
 
 
         }
