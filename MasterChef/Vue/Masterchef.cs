@@ -25,7 +25,8 @@ namespace Vue
 
         private void add_Click(object sender, EventArgs e)
         {
-  
+
+            string nbr_client = comboBox2.Text;
 
             int nbr_clientint = Convert.ToInt32(nbr_client);
             string nom_client = textBox2.Text;
