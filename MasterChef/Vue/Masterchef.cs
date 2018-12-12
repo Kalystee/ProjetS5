@@ -27,7 +27,102 @@ namespace Vue
         {
             string nbr_client;
             nbr_client = comboBox2.Text;
-            int nbr_clientint = Convert.ToInt32(nbr_client.Text);
+            int nbr_clientint = Convert.ToInt32(nbr_client);
+            string nom_client = textBox2.Text;
+            switch (nbr_clientint)
+            {
+                case 1:
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = false;
+                    pictureBox4.Visible = false;
+                    pictureBox5.Visible = false;
+                    pictureBox6.Visible = false;
+                    pictureBox7.Visible = false;
+                    pictureBox8.Visible = false;
+                    pictureBox9.Visible = false;
+                    break;
+
+                case 2:
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                    pictureBox4.Visible = false;
+                    pictureBox5.Visible = false;
+                    pictureBox6.Visible = false;
+                    pictureBox7.Visible = false;
+                    pictureBox8.Visible = false;
+                    pictureBox9.Visible = false;
+                    break;
+
+                case 3:
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                    pictureBox4.Visible = true;
+                    pictureBox5.Visible = false;
+                    pictureBox6.Visible = false;
+                    pictureBox7.Visible = false;
+                    pictureBox8.Visible = false;
+                    pictureBox9.Visible = false;
+                    break;
+
+                case 4:
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                    pictureBox4.Visible = true;
+                    pictureBox5.Visible = true;
+                    pictureBox6.Visible = false;
+                    pictureBox7.Visible = false;
+                    pictureBox8.Visible = false;
+                    pictureBox9.Visible = false;
+
+                    break;
+
+                case 5:
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                    pictureBox4.Visible = true;
+                    pictureBox5.Visible = true;
+                    pictureBox6.Visible = true;
+                    pictureBox7.Visible = false;
+                    pictureBox8.Visible = false;
+                    pictureBox9.Visible = false;
+                    break;
+
+                case 6:
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                    pictureBox4.Visible = true;
+                    pictureBox5.Visible = true;
+                    pictureBox6.Visible = true;
+                    pictureBox7.Visible = true;
+                    pictureBox8.Visible = false;
+                    pictureBox9.Visible = false;
+                    break;
+
+                case 7:
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                    pictureBox4.Visible = true;
+                    pictureBox5.Visible = true;
+                    pictureBox6.Visible = true;
+                    pictureBox7.Visible = true;
+                    pictureBox8.Visible = true;
+                    pictureBox9.Visible = false;
+                    break;
+
+                case 8:
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                    pictureBox4.Visible = true;
+                    pictureBox5.Visible = true;
+                    pictureBox6.Visible = true;
+                    pictureBox7.Visible = true;
+                    pictureBox8.Visible = true;
+                    pictureBox9.Visible = true;
+                    break;
+
+
+
+            }
             
 
         }
@@ -167,6 +262,26 @@ namespace Vue
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
 
         }
