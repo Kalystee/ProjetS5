@@ -26,7 +26,8 @@ namespace Vue
         private void add_Click(object sender, EventArgs e)
         {
             string nbr_client;
-            nbr_client = textBox1.Text;
+            nbr_client = comboBox2.Text;
+            int nbr_clientint = Convert.ToInt32(nbr_client.Text);
             
 
         }
@@ -156,6 +157,16 @@ namespace Vue
         }
 
         private void Masterchef_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
