@@ -24,6 +24,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
             /* PREPARATION D'UN PLAT
             
             CnxBDD bdd = new CnxBDD();
@@ -57,6 +58,7 @@ namespace ConsoleApp1
              finally
              {
                  Console.Read();
+
              }*/
 
 
@@ -78,12 +80,10 @@ namespace ConsoleApp1
             */
 
 
-
             /*   TEST SOCKET
             Server.StartServer();
-            
             ReceptionPlatClient.StartClient();
-            */
+            
 
 
         }
