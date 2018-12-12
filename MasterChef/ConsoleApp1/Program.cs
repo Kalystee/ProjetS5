@@ -83,7 +83,7 @@ namespace ConsoleApp1
             /*   TEST SOCKET
             Server.StartServer();
             ReceptionPlatClient.StartClient();
-            
+            */
 
 
         }
